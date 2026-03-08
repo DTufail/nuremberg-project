@@ -18,3 +18,7 @@ Thumbs.db
 # Exclude unnecessary output files
 output/temp/
 output/intermediate/
+
+# Exclude large output files
+output/chunks.jsonl
+
