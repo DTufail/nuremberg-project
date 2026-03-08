@@ -1,0 +1,156 @@
+[
+  {
+    "volume": 1,
+    "status": 200,
+    "sessions": 45,
+    "first": "https://avalon.law.yale.edu/imt/members.asp",
+    "last": "https://avalon.law.yale.edu/imt/judsent.asp"
+  },
+  {
+    "volume": 2,
+    "status": 200,
+    "sessions": 12,
+    "first": "https://avalon.law.yale.edu/imt/11-14-45.asp",
+    "last": "https://avalon.law.yale.edu/imt/11-30-45.asp"
+  },
+  {
+    "volume": 3,
+    "status": 200,
+    "sessions": 11,
+    "first": "https://avalon.law.yale.edu/imt/12-01-45.asp",
+    "last": "https://avalon.law.yale.edu/imt/12-14-45.asp"
+  },
+  {
+    "volume": 4,
+    "status": 200,
+    "sessions": 9,
+    "first": "https://avalon.law.yale.edu/imt/12-17-45.asp",
+    "last": "https://avalon.law.yale.edu/imt/01-08-46.asp"
+  },
+  {
+    "volume": 5,
+    "status": 200,
+    "sessions": 10,
+    "first": "https://avalon.law.yale.edu/imt/01-09-46.asp",
+    "last": "https://avalon.law.yale.edu/imt/01-21-46.asp"
+  },
+  {
+    "volume": 6,
+    "status": 200,
+    "sessions": 11,
+    "first": "https://avalon.law.yale.edu/imt/01-22-46.asp",
+    "last": "https://avalon.law.yale.edu/imt/02-04-46.asp"
+  },
+  {
+    "volume": 7,
+    "status": 200,
+    "sessions": 12,
+    "first": "https://avalon.law.yale.edu/imt/02-05-46.asp",
+    "last": "https://avalon.law.yale.edu/imt/02-19-46.asp"
+  },
+  {
+    "volume": 8,
+    "status": 200,
+    "sessions": 12,
+    "first": "https://avalon.law.yale.edu/imt/02-20-46.asp",
+    "last": "https://avalon.law.yale.edu/imt/03-05-46.asp"
+  },
+  {
+    "volume": 9,
+    "status": 200,
+    "sessions": 13,
+    "first": "https://avalon.law.yale.edu/imt/03-08-46.asp",
+    "last": "https://avalon.law.yale.edu/imt/03-23-46.asp"
+  },
+  {
+    "volume": 10,
+    "status": 200,
+    "sessions": 12,
+    "first": "https://avalon.law.yale.edu/imt/03-25-46.asp",
+    "last": "https://avalon.law.yale.edu/imt/04-06-46.asp"
+  },
+  {
+    "volume": 11,
+    "status": 200,
+    "sessions": 9,
+    "first": "https://avalon.law.yale.edu/imt/04-08-46.asp",
+    "last": "https://avalon.law.yale.edu/imt/04-17-46.asp"
+  },
+  {
+    "volume": 12,
+    "status": 200,
+    "sessions": 9,
+    "first": "https://avalon.law.yale.edu/imt/04-18-46.asp",
+    "last": "https://avalon.law.yale.edu/imt/05-02-46.asp"
+  },
+  {
+    "volume": 13,
+    "status": 200,
+    "sessions": 11,
+    "first": "https://avalon.law.yale.edu/imt/05-03-46.asp",
+    "last": "https://avalon.law.yale.edu/imt/05-15-46.asp"
+  },
+  {
+    "volume": 14,
+    "status": 200,
+    "sessions": 10,
+    "first": "https://avalon.law.yale.edu/imt/05-16-46.asp",
+    "last": "https://avalon.law.yale.edu/imt/05-28-46.asp"
+  },
+  {
+    "volume": 15,
+    "status": 200,
+    "sessions": 11,
+    "first": "https://avalon.law.yale.edu/imt/05-29-46.asp",
+    "last": "https://avalon.law.yale.edu/imt/06-10-46.asp"
+  },
+  {
+    "volume": 16,
+    "status": 200,
+    "sessions": 11,
+    "first": "https://avalon.law.yale.edu/imt/06-11-46.asp",
+    "last": "https://avalon.law.yale.edu/imt/06-24-46.asp"
+  },
+  {
+    "volume": 17,
+    "status": 200,
+    "sessions": 11,
+    "first": "https://avalon.law.yale.edu/imt/06-25-46.asp",
+    "last": "https://avalon.law.yale.edu/imt/07-08-46.asp"
+  },
+  {
+    "volume": 18,
+    "status": 200,
+    "sessions": 8,
+    "first": "https://avalon.law.yale.edu/imt/07-09-46.asp",
+    "last": "https://avalon.law.yale.edu/imt/07-18-46.asp"
+  },
+  {
+    "volume": 19,
+    "status": 200,
+    "sessions": 8,
+    "first": "https://avalon.law.yale.edu/imt/07-19-46.asp",
+    "last": "https://avalon.law.yale.edu/imt/07-29-46.asp"
+  },
+  {
+    "volume": 20,
+    "status": 200,
+    "sessions": 11,
+    "first": "https://avalon.law.yale.edu/imt/07-30-46.asp",
+    "last": "https://avalon.law.yale.edu/imt/08-10-46.asp"
+  },
+  {
+    "volume": 21,
+    "status": 200,
+    "sessions": 11,
+    "first": "https://avalon.law.yale.edu/imt/08-12-46.asp",
+    "last": "https://avalon.law.yale.edu/imt/08-26-46.asp"
+  },
+  {
+    "volume": 22,
+    "status": 200,
+    "sessions": 7,
+    "first": "https://avalon.law.yale.edu/imt/08-27-46.asp",
+    "last": "https://avalon.law.yale.edu/imt/10-01-46.asp"
+  }
+]

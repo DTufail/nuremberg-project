@@ -1,0 +1,902 @@
+2026-03-07 22:20:11,288 [INFO] Nuremberg Scholar — Yale Avalon IMT Scraper
+2026-03-07 22:20:11,288 [INFO] Output directory: /Users/daniyal/project/output
+2026-03-07 22:20:11,288 [INFO] Pre-flight: checking server encoding declaration...
+2026-03-07 22:20:14,230 [INFO]   Content-Type: text/html
+2026-03-07 22:20:14,230 [INFO]   requests.encoding: ISO-8859-1
+2026-03-07 22:20:15,082 [INFO]   apparent_encoding: utf-8
+2026-03-07 22:20:15,085 [INFO]   Saved to output/encoding_check.json
+2026-03-07 22:20:15,086 [INFO] === PHASE 1: Building session URL list from 22 volume menus ===
+2026-03-07 22:20:15,086 [INFO] Volume  1: https://avalon.law.yale.edu/subject_menus/imtproc_v1menu.asp
+2026-03-07 22:20:15,428 [INFO]   Vol 1 (procedural): 45 content links
+2026-03-07 22:20:15,429 [INFO] Volume  2: https://avalon.law.yale.edu/subject_menus/imtproc_v2menu.asp
+2026-03-07 22:20:17,356 [INFO]   Vol  2: 12 session links
+2026-03-07 22:20:17,357 [INFO] Volume  3: https://avalon.law.yale.edu/subject_menus/imtproc_v3menu.asp
+2026-03-07 22:20:19,147 [INFO]   Vol  3: 11 session links
+2026-03-07 22:20:19,147 [INFO] Volume  4: https://avalon.law.yale.edu/subject_menus/imtproc_v4menu.asp
+2026-03-07 22:20:20,895 [INFO]   Vol  4: 9 session links
+2026-03-07 22:20:20,896 [INFO] Volume  5: https://avalon.law.yale.edu/subject_menus/imtproc_v5menu.asp
+2026-03-07 22:20:22,708 [INFO]   Vol  5: 10 session links
+2026-03-07 22:20:22,708 [INFO] Volume  6: https://avalon.law.yale.edu/subject_menus/imtproc_v6menu.asp
+2026-03-07 22:20:24,636 [INFO]   Vol  6: 11 session links
+2026-03-07 22:20:24,636 [INFO] Volume  7: https://avalon.law.yale.edu/subject_menus/imtproc_v7menu.asp
+2026-03-07 22:20:26,367 [INFO]   Vol  7: 12 session links
+2026-03-07 22:20:26,367 [INFO] Volume  8: https://avalon.law.yale.edu/subject_menus/imtproc_v8menu.asp
+2026-03-07 22:20:28,322 [INFO]   Vol  8: 12 session links
+2026-03-07 22:20:28,322 [INFO] Volume  9: https://avalon.law.yale.edu/subject_menus/imtproc_v9menu.asp
+2026-03-07 22:20:30,085 [INFO]   Vol  9: 13 session links
+2026-03-07 22:20:30,085 [INFO] Volume 10: https://avalon.law.yale.edu/subject_menus/imtproc_v10menu.asp
+2026-03-07 22:20:31,880 [INFO]   Vol 10: 12 session links
+2026-03-07 22:20:31,880 [INFO] Volume 11: https://avalon.law.yale.edu/subject_menus/imtproc_v11menu.asp
+2026-03-07 22:20:33,644 [INFO]   Vol 11: 9 session links
+2026-03-07 22:20:33,644 [INFO] Volume 12: https://avalon.law.yale.edu/subject_menus/imtproc_v12menu.asp
+2026-03-07 22:20:35,391 [INFO]   Vol 12: 9 session links
+2026-03-07 22:20:35,391 [INFO] Volume 13: https://avalon.law.yale.edu/subject_menus/imtproc_v13menu.asp
+2026-03-07 22:20:37,168 [INFO]   Vol 13: 11 session links
+2026-03-07 22:20:37,169 [INFO] Volume 14: https://avalon.law.yale.edu/subject_menus/imtproc_v14menu.asp
+2026-03-07 22:20:38,890 [INFO]   Vol 14: 10 session links
+2026-03-07 22:20:38,890 [INFO] Volume 15: https://avalon.law.yale.edu/subject_menus/imtproc_v15menu.asp
+2026-03-07 22:20:40,641 [INFO]   Vol 15: 11 session links
+2026-03-07 22:20:40,641 [INFO] Volume 16: https://avalon.law.yale.edu/subject_menus/imtproc_v16menu.asp
+2026-03-07 22:20:42,434 [INFO]   Vol 16: 11 session links
+2026-03-07 22:20:42,434 [INFO] Volume 17: https://avalon.law.yale.edu/subject_menus/imtproc_v17menu.asp
+2026-03-07 22:20:44,244 [INFO]   Vol 17: 11 session links
+2026-03-07 22:20:44,244 [INFO] Volume 18: https://avalon.law.yale.edu/subject_menus/imtproc_v18menu.asp
+2026-03-07 22:20:46,235 [INFO]   Vol 18: 8 session links
+2026-03-07 22:20:46,235 [INFO] Volume 19: https://avalon.law.yale.edu/subject_menus/imtproc_v19menu.asp
+2026-03-07 22:20:47,975 [INFO]   Vol 19: 8 session links
+2026-03-07 22:20:47,976 [INFO] Volume 20: https://avalon.law.yale.edu/subject_menus/imtproc_v20menu.asp
+2026-03-07 22:20:49,761 [INFO]   Vol 20: 11 session links
+2026-03-07 22:20:49,761 [INFO] Volume 21: https://avalon.law.yale.edu/subject_menus/imtproc_v21menu.asp
+2026-03-07 22:20:51,575 [INFO]   Vol 21: 11 session links
+2026-03-07 22:20:51,575 [INFO] Volume 22: https://avalon.law.yale.edu/subject_menus/imtproc_v22menu.asp
+2026-03-07 22:20:53,311 [INFO]   Vol 22: 7 session links
+2026-03-07 22:20:53,312 [INFO] Total session URLs enumerated: 264
+2026-03-07 22:20:53,313 [INFO] === Scraping 264 session pages ===
+2026-03-07 22:20:53,313 [INFO] [   1/264] https://avalon.law.yale.edu/imt/members.asp
+2026-03-07 22:20:55,069 [INFO] [   2/264] https://avalon.law.yale.edu/imt/official.asp
+2026-03-07 22:20:56,879 [WARNING]   Flags: ['POSSIBLE_TRUNCATION']
+2026-03-07 22:20:56,881 [INFO] [   3/264] https://avalon.law.yale.edu/imt/prosecu.asp
+2026-03-07 22:20:58,641 [INFO] [   4/264] https://avalon.law.yale.edu/imt/defense.asp
+2026-03-07 22:21:00,465 [INFO] [   5/264] https://avalon.law.yale.edu/imt/imtchart.asp
+2026-03-07 22:21:02,214 [INFO] [   6/264] https://avalon.law.yale.edu/imt/imtconst.asp
+2026-03-07 22:21:04,057 [INFO] [   7/264] https://avalon.law.yale.edu/imt/imtprot.asp
+2026-03-07 22:21:05,850 [INFO] [   8/264] https://avalon.law.yale.edu/imt/imtrules.asp
+2026-03-07 22:21:07,692 [INFO] [   9/264] https://avalon.law.yale.edu/imt/imtmin.asp
+2026-03-07 22:21:09,508 [INFO] [  10/264] https://avalon.law.yale.edu/imt/count.asp
+2026-03-07 22:21:11,240 [WARNING]   Flags: ['POSSIBLE_TRUNCATION']
+2026-03-07 22:21:11,241 [INFO] [  11/264] https://avalon.law.yale.edu/imt/discrep.asp
+2026-03-07 22:21:13,036 [INFO] [  12/264] https://avalon.law.yale.edu/imt/plea.asp
+2026-03-07 22:21:14,839 [INFO] [  13/264] https://avalon.law.yale.edu/imt/v1-01.asp
+2026-03-07 22:21:16,775 [INFO] [  14/264] https://avalon.law.yale.edu/imt/v1-02.asp
+2026-03-07 22:21:18,555 [INFO] [  15/264] https://avalon.law.yale.edu/imt/v1-03.asp
+2026-03-07 22:21:20,325 [INFO] [  16/264] https://avalon.law.yale.edu/imt/v1-04.asp
+2026-03-07 22:21:22,044 [INFO] [  17/264] https://avalon.law.yale.edu/imt/v1-05.asp
+2026-03-07 22:21:23,842 [INFO] [  18/264] https://avalon.law.yale.edu/imt/v1-06.asp
+2026-03-07 22:21:25,697 [INFO] [  19/264] https://avalon.law.yale.edu/imt/v1-07.asp
+2026-03-07 22:21:27,445 [INFO] [  20/264] https://avalon.law.yale.edu/imt/v1-08.asp
+2026-03-07 22:21:29,183 [INFO] [  21/264] https://avalon.law.yale.edu/imt/v1-09.asp
+2026-03-07 22:21:31,037 [INFO] [  22/264] https://avalon.law.yale.edu/imt/v1-10.asp
+2026-03-07 22:21:32,819 [INFO] [  23/264] https://avalon.law.yale.edu/imt/v1-11.asp
+2026-03-07 22:21:34,559 [WARNING]   Flags: ['POSSIBLE_TRUNCATION']
+2026-03-07 22:21:34,560 [INFO] [  24/264] https://avalon.law.yale.edu/imt/v1-12.asp
+2026-03-07 22:21:36,329 [INFO] [  25/264] https://avalon.law.yale.edu/imt/v1-13.asp
+2026-03-07 22:21:38,122 [INFO] [  26/264] https://avalon.law.yale.edu/imt/v1-14.asp
+2026-03-07 22:21:39,866 [INFO] [  27/264] https://avalon.law.yale.edu/imt/v1-15.asp
+2026-03-07 22:21:41,672 [INFO] [  28/264] https://avalon.law.yale.edu/imt/v1-16.asp
+2026-03-07 22:21:43,448 [INFO] [  29/264] https://avalon.law.yale.edu/imt/v1-17.asp
+2026-03-07 22:21:45,392 [WARNING]   Flags: ['POSSIBLE_TRUNCATION']
+2026-03-07 22:21:45,393 [INFO] [  30/264] https://avalon.law.yale.edu/imt/v1-18.asp
+2026-03-07 22:21:47,535 [INFO] [  31/264] https://avalon.law.yale.edu/imt/v1-19.asp
+2026-03-07 22:21:49,347 [INFO] [  32/264] https://avalon.law.yale.edu/imt/v1-20.asp
+2026-03-07 22:21:51,089 [INFO] [  33/264] https://avalon.law.yale.edu/imt/v1-21.asp
+2026-03-07 22:21:52,831 [INFO] [  34/264] https://avalon.law.yale.edu/imt/v1-22.asp
+2026-03-07 22:21:54,584 [INFO] [  35/264] https://avalon.law.yale.edu/imt/v1-23.asp
+2026-03-07 22:21:56,320 [INFO] [  36/264] https://avalon.law.yale.edu/imt/v1-24.asp
+2026-03-07 22:21:58,060 [INFO] [  37/264] https://avalon.law.yale.edu/imt/v1-25.asp
+2026-03-07 22:21:59,796 [INFO] [  38/264] https://avalon.law.yale.edu/imt/v1-26.asp
+2026-03-07 22:22:01,544 [WARNING]   Flags: ['POSSIBLE_TRUNCATION']
+2026-03-07 22:22:01,545 [INFO] [  39/264] https://avalon.law.yale.edu/imt/v1-27.asp
+2026-03-07 22:22:03,298 [INFO] [  40/264] https://avalon.law.yale.edu/imt/v1-28.asp
+2026-03-07 22:22:05,047 [INFO] [  41/264] https://avalon.law.yale.edu/imt/v1-29.asp
+2026-03-07 22:22:06,781 [INFO] [  42/264] https://avalon.law.yale.edu/imt/v1-30.asp
+2026-03-07 22:22:08,546 [INFO] [  43/264] https://avalon.law.yale.edu/subject_menus/judcont.asp
+2026-03-07 22:22:10,836 [WARNING]   Flags: ['POSSIBLE_TRUNCATION']
+2026-03-07 22:22:10,837 [INFO] [  44/264] https://avalon.law.yale.edu/imt/juddiss.asp
+2026-03-07 22:22:12,779 [INFO] [  45/264] https://avalon.law.yale.edu/imt/judsent.asp
+2026-03-07 22:22:14,483 [INFO] [  46/264] https://avalon.law.yale.edu/imt/11-14-45.asp
+2026-03-07 22:22:16,271 [INFO] [  47/264] https://avalon.law.yale.edu/imt/11-15-45.asp
+2026-03-07 22:22:18,029 [INFO] [  48/264] https://avalon.law.yale.edu/imt/11-17-45.asp
+2026-03-07 22:22:19,754 [INFO] [  49/264] https://avalon.law.yale.edu/imt/11-20-45.asp
+2026-03-07 22:22:21,817 [INFO] [  50/264] https://avalon.law.yale.edu/imt/11-21-45.asp
+2026-03-07 22:22:23,532 [INFO] [  51/264] https://avalon.law.yale.edu/imt/11-22-45.asp
+2026-03-07 22:22:25,271 [INFO] [  52/264] https://avalon.law.yale.edu/imt/11-23-45.asp
+2026-03-07 22:22:27,032 [INFO] [  53/264] https://avalon.law.yale.edu/imt/11-26-45.asp
+2026-03-07 22:22:28,786 [INFO] [  54/264] https://avalon.law.yale.edu/imt/11-27-45.asp
+2026-03-07 22:22:30,573 [INFO] [  55/264] https://avalon.law.yale.edu/imt/11-28-45.asp
+2026-03-07 22:22:32,332 [INFO] [  56/264] https://avalon.law.yale.edu/imt/11-29-45.asp
+2026-03-07 22:22:34,080 [INFO] [  57/264] https://avalon.law.yale.edu/imt/11-30-45.asp
+2026-03-07 22:22:35,907 [INFO] [  58/264] https://avalon.law.yale.edu/imt/12-01-45.asp
+2026-03-07 22:22:37,585 [WARNING]   Flags: ['NO_PAGE_NUMBERS']
+2026-03-07 22:22:37,599 [INFO] [  59/264] https://avalon.law.yale.edu/imt/12-03-45.asp
+2026-03-07 22:22:39,364 [INFO] [  60/264] https://avalon.law.yale.edu/imt/12-04-45.asp
+2026-03-07 22:22:41,117 [INFO] [  61/264] https://avalon.law.yale.edu/imt/12-05-45.asp
+2026-03-07 22:22:42,894 [INFO] [  62/264] https://avalon.law.yale.edu/imt/12-06-45.asp
+2026-03-07 22:22:44,719 [INFO] [  63/264] https://avalon.law.yale.edu/imt/12-07-45.asp
+2026-03-07 22:22:46,582 [INFO] [  64/264] https://avalon.law.yale.edu/imt/12-10-45.asp
+2026-03-07 22:22:48,349 [INFO] [  65/264] https://avalon.law.yale.edu/imt/12-11-45.asp
+2026-03-07 22:22:49,993 [INFO] [  66/264] https://avalon.law.yale.edu/imt/12-12-45.asp
+2026-03-07 22:22:51,838 [INFO] [  67/264] https://avalon.law.yale.edu/imt/12-13-45.asp
+2026-03-07 22:22:53,628 [INFO] [  68/264] https://avalon.law.yale.edu/imt/12-14-45.asp
+2026-03-07 22:22:55,364 [INFO] [  69/264] https://avalon.law.yale.edu/imt/12-17-45.asp
+2026-03-07 22:22:57,126 [INFO] [  70/264] https://avalon.law.yale.edu/imt/12-18-45.asp
+2026-03-07 22:22:58,922 [INFO] [  71/264] https://avalon.law.yale.edu/imt/12-19-45.asp
+2026-03-07 22:23:00,649 [INFO] [  72/264] https://avalon.law.yale.edu/imt/12-20-45.asp
+2026-03-07 22:23:02,408 [INFO] [  73/264] https://avalon.law.yale.edu/imt/01-02-46.asp
+2026-03-07 22:23:04,157 [INFO] [  74/264] https://avalon.law.yale.edu/imt/01-03-46.asp
+2026-03-07 22:23:06,019 [INFO] [  75/264] https://avalon.law.yale.edu/imt/01-04-46.asp
+2026-03-07 22:23:07,708 [INFO] [  76/264] https://avalon.law.yale.edu/imt/01-07-46.asp
+2026-03-07 22:23:09,475 [INFO] [  77/264] https://avalon.law.yale.edu/imt/01-08-46.asp
+2026-03-07 22:23:11,204 [INFO] [  78/264] https://avalon.law.yale.edu/imt/01-09-46.asp
+2026-03-07 22:23:13,097 [INFO] [  79/264] https://avalon.law.yale.edu/imt/01-10-46.asp
+2026-03-07 22:23:14,849 [INFO] [  80/264] https://avalon.law.yale.edu/imt/01-11-46.asp
+2026-03-07 22:23:16,645 [INFO] [  81/264] https://avalon.law.yale.edu/imt/01-14-46.asp
+2026-03-07 22:23:18,351 [INFO] [  82/264] https://avalon.law.yale.edu/imt/01-15-46.asp
+2026-03-07 22:23:20,207 [INFO] [  83/264] https://avalon.law.yale.edu/imt/01-16-46.asp
+2026-03-07 22:23:21,954 [INFO] [  84/264] https://avalon.law.yale.edu/imt/01-17-46.asp
+2026-03-07 22:23:23,802 [INFO] [  85/264] https://avalon.law.yale.edu/imt/01-18-46.asp
+2026-03-07 22:23:25,567 [INFO] [  86/264] https://avalon.law.yale.edu/imt/01-19-46.asp
+2026-03-07 22:23:27,289 [INFO] [  87/264] https://avalon.law.yale.edu/imt/01-21-46.asp
+2026-03-07 22:23:29,064 [INFO] [  88/264] https://avalon.law.yale.edu/imt/01-22-46.asp
+2026-03-07 22:23:30,841 [INFO] [  89/264] https://avalon.law.yale.edu/imt/01-23-46.asp
+2026-03-07 22:23:32,604 [INFO] [  90/264] https://avalon.law.yale.edu/imt/01-24-46.asp
+2026-03-07 22:23:34,344 [INFO] [  91/264] https://avalon.law.yale.edu/imt/01-25-46.asp
+2026-03-07 22:23:36,172 [INFO] [  92/264] https://avalon.law.yale.edu/imt/01-28-46.asp
+2026-03-07 22:23:38,109 [INFO] [  93/264] https://avalon.law.yale.edu/imt/01-29-46.asp
+2026-03-07 22:23:39,895 [INFO] [  94/264] https://avalon.law.yale.edu/imt/01-30-46.asp
+2026-03-07 22:23:41,594 [INFO] [  95/264] https://avalon.law.yale.edu/imt/01-31-46.asp
+2026-03-07 22:23:43,348 [INFO] [  96/264] https://avalon.law.yale.edu/imt/02-01-46.asp
+2026-03-07 22:23:45,114 [INFO] [  97/264] https://avalon.law.yale.edu/imt/02-02-46.asp
+2026-03-07 22:23:46,844 [INFO] [  98/264] https://avalon.law.yale.edu/imt/02-04-46.asp
+2026-03-07 22:23:48,816 [INFO] [  99/264] https://avalon.law.yale.edu/imt/02-05-46.asp
+2026-03-07 22:23:50,684 [INFO] [ 100/264] https://avalon.law.yale.edu/imt/02-06-46.asp
+2026-03-07 22:23:52,255 [INFO] [ 101/264] https://avalon.law.yale.edu/imt/02-07-46.asp
+2026-03-07 22:23:54,087 [INFO] [ 102/264] https://avalon.law.yale.edu/imt/02-08-46.asp
+2026-03-07 22:23:55,863 [INFO] [ 103/264] https://avalon.law.yale.edu/imt/02-09-46.asp
+2026-03-07 22:23:57,690 [INFO] [ 104/264] https://avalon.law.yale.edu/imt/02-11-46.asp
+2026-03-07 22:23:59,522 [INFO] [ 105/264] https://avalon.law.yale.edu/imt/02-12-46.asp
+2026-03-07 22:24:01,313 [INFO] [ 106/264] https://avalon.law.yale.edu/imt/02-13-46.asp
+2026-03-07 22:24:03,067 [INFO] [ 107/264] https://avalon.law.yale.edu/imt/02-14-46.asp
+2026-03-07 22:24:04,798 [INFO] [ 108/264] https://avalon.law.yale.edu/imt/02-15-46.asp
+2026-03-07 22:24:06,609 [INFO] [ 109/264] https://avalon.law.yale.edu/imt/02-18-46.asp
+2026-03-07 22:24:08,369 [INFO] [ 110/264] https://avalon.law.yale.edu/imt/02-19-46.asp
+2026-03-07 22:24:10,114 [INFO] [ 111/264] https://avalon.law.yale.edu/imt/02-20-46.asp
+2026-03-07 22:24:11,908 [WARNING]   Flags: ['NO_PAGE_NUMBERS']
+2026-03-07 22:24:11,910 [INFO] [ 112/264] https://avalon.law.yale.edu/imt/02-21-46.asp
+2026-03-07 22:24:13,667 [INFO] [ 113/264] https://avalon.law.yale.edu/imt/02-22-46.asp
+2026-03-07 22:24:15,432 [INFO] [ 114/264] https://avalon.law.yale.edu/imt/02-23-46.asp
+2026-03-07 22:24:17,183 [INFO] [ 115/264] https://avalon.law.yale.edu/imt/02-25-46.asp
+2026-03-07 22:24:19,064 [INFO] [ 116/264] https://avalon.law.yale.edu/imt/02-26-46.asp
+2026-03-07 22:24:20,859 [INFO] [ 117/264] https://avalon.law.yale.edu/imt/02-27-46.asp
+2026-03-07 22:24:22,640 [INFO] [ 118/264] https://avalon.law.yale.edu/imt/02-28-46.asp
+2026-03-07 22:24:24,482 [INFO] [ 119/264] https://avalon.law.yale.edu/imt/03-01-46.asp
+2026-03-07 22:24:26,351 [INFO] [ 120/264] https://avalon.law.yale.edu/imt/03-02-46.asp
+2026-03-07 22:24:28,128 [INFO] [ 121/264] https://avalon.law.yale.edu/imt/03-04-46.asp
+2026-03-07 22:24:30,135 [INFO] [ 122/264] https://avalon.law.yale.edu/imt/03-05-46.asp
+2026-03-07 22:24:31,838 [INFO] [ 123/264] https://avalon.law.yale.edu/imt/03-08-46.asp
+2026-03-07 22:24:33,777 [INFO] [ 124/264] https://avalon.law.yale.edu/imt/03-11-46.asp
+2026-03-07 22:24:35,597 [INFO] [ 125/264] https://avalon.law.yale.edu/imt/03-12-46.asp
+2026-03-07 22:24:37,344 [INFO] [ 126/264] https://avalon.law.yale.edu/imt/03-13-46.asp
+2026-03-07 22:24:39,146 [INFO] [ 127/264] https://avalon.law.yale.edu/imt/03-14-46.asp
+2026-03-07 22:24:40,808 [INFO] [ 128/264] https://avalon.law.yale.edu/imt/03-15-46.asp
+2026-03-07 22:24:42,979 [INFO] [ 129/264] https://avalon.law.yale.edu/imt/03-16-46.asp
+2026-03-07 22:24:44,764 [INFO] [ 130/264] https://avalon.law.yale.edu/imt/03-18-46.asp
+2026-03-07 22:24:46,578 [INFO] [ 131/264] https://avalon.law.yale.edu/imt/03-19-46.asp
+2026-03-07 22:24:48,340 [INFO] [ 132/264] https://avalon.law.yale.edu/imt/03-20-46.asp
+2026-03-07 22:24:50,137 [INFO] [ 133/264] https://avalon.law.yale.edu/imt/03-21-46.asp
+2026-03-07 22:24:52,002 [INFO] [ 134/264] https://avalon.law.yale.edu/imt/03-22-46.asp
+2026-03-07 22:24:53,798 [INFO] [ 135/264] https://avalon.law.yale.edu/imt/03-23-46.asp
+2026-03-07 22:24:55,823 [INFO] [ 136/264] https://avalon.law.yale.edu/imt/03-25-46.asp
+2026-03-07 22:24:57,749 [INFO] [ 137/264] https://avalon.law.yale.edu/imt/03-26-46.asp
+2026-03-07 22:24:59,430 [INFO] [ 138/264] https://avalon.law.yale.edu/imt/03-27-46.asp
+2026-03-07 22:25:01,233 [INFO] [ 139/264] https://avalon.law.yale.edu/imt/03-28-46.asp
+2026-03-07 22:25:03,538 [INFO] [ 140/264] https://avalon.law.yale.edu/imt/03-29-46.asp
+2026-03-07 22:25:05,266 [INFO] [ 141/264] https://avalon.law.yale.edu/imt/03-30-46.asp
+2026-03-07 22:25:07,016 [INFO] [ 142/264] https://avalon.law.yale.edu/imt/04-01-46.asp
+2026-03-07 22:25:08,891 [INFO] [ 143/264] https://avalon.law.yale.edu/imt/04-02-46.asp
+2026-03-07 22:25:10,622 [INFO] [ 144/264] https://avalon.law.yale.edu/imt/04-03-46.asp
+2026-03-07 22:25:12,249 [INFO] [ 145/264] https://avalon.law.yale.edu/imt/04-04-46.asp
+2026-03-07 22:25:14,057 [INFO] [ 146/264] https://avalon.law.yale.edu/imt/04-05-46.asp
+2026-03-07 22:25:15,893 [INFO] [ 147/264] https://avalon.law.yale.edu/imt/04-06-46.asp
+2026-03-07 22:25:17,614 [INFO] [ 148/264] https://avalon.law.yale.edu/imt/04-08-46.asp
+2026-03-07 22:25:19,396 [WARNING]   Flags: ['MISSING_CONTENT_CONTAINER']
+2026-03-07 22:25:19,399 [INFO] [ 149/264] https://avalon.law.yale.edu/imt/04-09-46.asp
+2026-03-07 22:25:21,349 [INFO] [ 150/264] https://avalon.law.yale.edu/imt/04-10-46.asp
+2026-03-07 22:25:23,117 [INFO] [ 151/264] https://avalon.law.yale.edu/imt/04-11-46.asp
+2026-03-07 22:25:24,841 [INFO] [ 152/264] https://avalon.law.yale.edu/imt/04-12-46.asp
+2026-03-07 22:25:26,646 [INFO] [ 153/264] https://avalon.law.yale.edu/imt/04-13-46.asp
+2026-03-07 22:25:28,452 [INFO] [ 154/264] https://avalon.law.yale.edu/imt/04-15-46.asp
+2026-03-07 22:25:30,291 [INFO] [ 155/264] https://avalon.law.yale.edu/imt/04-16-46.asp
+2026-03-07 22:25:32,033 [INFO] [ 156/264] https://avalon.law.yale.edu/imt/04-17-46.asp
+2026-03-07 22:25:33,898 [INFO] [ 157/264] https://avalon.law.yale.edu/imt/04-18-46.asp
+2026-03-07 22:25:35,589 [INFO] [ 158/264] https://avalon.law.yale.edu/imt/04-23-46.asp
+2026-03-07 22:25:37,360 [INFO] [ 159/264] https://avalon.law.yale.edu/imt/04-24-46.asp
+2026-03-07 22:25:39,106 [INFO] [ 160/264] https://avalon.law.yale.edu/imt/04-25-46.asp
+2026-03-07 22:25:40,880 [INFO] [ 161/264] https://avalon.law.yale.edu/imt/04-26-46.asp
+2026-03-07 22:25:42,681 [INFO] [ 162/264] https://avalon.law.yale.edu/imt/04-29-46.asp
+2026-03-07 22:25:44,541 [INFO] [ 163/264] https://avalon.law.yale.edu/imt/04-30-46.asp
+2026-03-07 22:25:46,291 [INFO] [ 164/264] https://avalon.law.yale.edu/imt/05-01-46.asp
+2026-03-07 22:25:48,134 [INFO] [ 165/264] https://avalon.law.yale.edu/imt/05-02-46.asp
+2026-03-07 22:25:50,007 [INFO] [ 166/264] https://avalon.law.yale.edu/imt/05-03-46.asp
+2026-03-07 22:25:51,765 [INFO] [ 167/264] https://avalon.law.yale.edu/imt/05-04-46.asp
+2026-03-07 22:25:53,408 [INFO] [ 168/264] https://avalon.law.yale.edu/imt/05-06-46.asp
+2026-03-07 22:25:55,257 [INFO] [ 169/264] https://avalon.law.yale.edu/imt/05-07-46.asp
+2026-03-07 22:25:57,116 [INFO] [ 170/264] https://avalon.law.yale.edu/imt/05-08-46.asp
+2026-03-07 22:25:58,912 [INFO] [ 171/264] https://avalon.law.yale.edu/imt/05-09-46.asp
+2026-03-07 22:26:00,717 [INFO] [ 172/264] https://avalon.law.yale.edu/imt/05-10-46.asp
+2026-03-07 22:26:02,547 [INFO] [ 173/264] https://avalon.law.yale.edu/imt/05-11-46.asp
+2026-03-07 22:26:04,169 [INFO] [ 174/264] https://avalon.law.yale.edu/imt/05-13-46.asp
+2026-03-07 22:26:06,009 [INFO] [ 175/264] https://avalon.law.yale.edu/imt/05-14-46.asp
+2026-03-07 22:26:07,788 [INFO] [ 176/264] https://avalon.law.yale.edu/imt/05-15-46.asp
+2026-03-07 22:26:09,559 [INFO] [ 177/264] https://avalon.law.yale.edu/imt/05-16-46.asp
+2026-03-07 22:26:11,252 [INFO] [ 178/264] https://avalon.law.yale.edu/imt/05-17-46.asp
+2026-03-07 22:26:12,977 [INFO] [ 179/264] https://avalon.law.yale.edu/imt/05-18-46.asp
+2026-03-07 22:26:14,840 [INFO] [ 180/264] https://avalon.law.yale.edu/imt/05-20-46.asp
+2026-03-07 22:26:16,870 [INFO] [ 181/264] https://avalon.law.yale.edu/imt/05-21-46.asp
+2026-03-07 22:26:18,584 [INFO] [ 182/264] https://avalon.law.yale.edu/imt/05-22-46.asp
+2026-03-07 22:26:20,387 [INFO] [ 183/264] https://avalon.law.yale.edu/imt/05-23-46.asp
+2026-03-07 22:26:22,105 [INFO] [ 184/264] https://avalon.law.yale.edu/imt/05-24-46.asp
+2026-03-07 22:26:23,911 [INFO] [ 185/264] https://avalon.law.yale.edu/imt/05-27-46.asp
+2026-03-07 22:26:25,770 [INFO] [ 186/264] https://avalon.law.yale.edu/imt/05-28-46.asp
+2026-03-07 22:26:27,534 [INFO] [ 187/264] https://avalon.law.yale.edu/imt/05-29-46.asp
+2026-03-07 22:26:29,300 [INFO] [ 188/264] https://avalon.law.yale.edu/imt/05-30-46.asp
+2026-03-07 22:26:31,193 [INFO] [ 189/264] https://avalon.law.yale.edu/imt/05-31-46.asp
+2026-03-07 22:26:33,032 [INFO] [ 190/264] https://avalon.law.yale.edu/imt/06-01-46.asp
+2026-03-07 22:26:34,675 [INFO] [ 191/264] https://avalon.law.yale.edu/imt/06-03-46.asp
+2026-03-07 22:26:36,543 [INFO] [ 192/264] https://avalon.law.yale.edu/imt/06-04-46.asp
+2026-03-07 22:26:38,330 [INFO] [ 193/264] https://avalon.law.yale.edu/imt/06-05-46.asp
+2026-03-07 22:26:40,024 [INFO] [ 194/264] https://avalon.law.yale.edu/imt/06-06-46.asp
+2026-03-07 22:26:41,821 [INFO] [ 195/264] https://avalon.law.yale.edu/imt/06-07-46.asp
+2026-03-07 22:26:43,559 [INFO] [ 196/264] https://avalon.law.yale.edu/imt/06-08-46.asp
+2026-03-07 22:26:45,288 [INFO] [ 197/264] https://avalon.law.yale.edu/imt/06-10-46.asp
+2026-03-07 22:26:47,076 [INFO] [ 198/264] https://avalon.law.yale.edu/imt/06-11-46.asp
+2026-03-07 22:26:48,869 [INFO] [ 199/264] https://avalon.law.yale.edu/imt/06-12-46.asp
+2026-03-07 22:26:50,706 [INFO] [ 200/264] https://avalon.law.yale.edu/imt/06-13-46.asp
+2026-03-07 22:26:52,477 [INFO] [ 201/264] https://avalon.law.yale.edu/imt/06-14-46.asp
+2026-03-07 22:26:54,425 [INFO] [ 202/264] https://avalon.law.yale.edu/imt/06-17-46.asp
+2026-03-07 22:26:56,146 [INFO] [ 203/264] https://avalon.law.yale.edu/imt/06-18-46.asp
+2026-03-07 22:26:57,971 [INFO] [ 204/264] https://avalon.law.yale.edu/imt/06-19-46.asp
+2026-03-07 22:26:59,720 [INFO] [ 205/264] https://avalon.law.yale.edu/imt/06-20-46.asp
+2026-03-07 22:27:01,479 [INFO] [ 206/264] https://avalon.law.yale.edu/imt/06-21-46.asp
+2026-03-07 22:27:03,284 [INFO] [ 207/264] https://avalon.law.yale.edu/imt/06-22-46.asp
+2026-03-07 22:27:05,086 [INFO] [ 208/264] https://avalon.law.yale.edu/imt/06-24-46.asp
+2026-03-07 22:27:07,053 [INFO] [ 209/264] https://avalon.law.yale.edu/imt/06-25-46.asp
+2026-03-07 22:27:09,008 [INFO] [ 210/264] https://avalon.law.yale.edu/imt/06-26-46.asp
+2026-03-07 22:27:10,762 [INFO] [ 211/264] https://avalon.law.yale.edu/imt/06-27-46.asp
+2026-03-07 22:27:12,544 [INFO] [ 212/264] https://avalon.law.yale.edu/imt/06-28-46.asp
+2026-03-07 22:27:14,349 [INFO] [ 213/264] https://avalon.law.yale.edu/imt/06-29-46.asp
+2026-03-07 22:27:16,056 [INFO] [ 214/264] https://avalon.law.yale.edu/imt/07-01-46.asp
+2026-03-07 22:27:17,938 [INFO] [ 215/264] https://avalon.law.yale.edu/imt/07-02-46.asp
+2026-03-07 22:27:19,615 [INFO] [ 216/264] https://avalon.law.yale.edu/imt/07-03-46.asp
+2026-03-07 22:27:21,524 [INFO] [ 217/264] https://avalon.law.yale.edu/imt/07-04-46.asp
+2026-03-07 22:27:23,236 [INFO] [ 218/264] https://avalon.law.yale.edu/imt/07-05-46.asp
+2026-03-07 22:27:25,007 [INFO] [ 219/264] https://avalon.law.yale.edu/imt/07-08-46.asp
+2026-03-07 22:27:26,821 [INFO] [ 220/264] https://avalon.law.yale.edu/imt/07-09-46.asp
+2026-03-07 22:27:28,618 [INFO] [ 221/264] https://avalon.law.yale.edu/imt/07-10-46.asp
+2026-03-07 22:27:30,336 [INFO] [ 222/264] https://avalon.law.yale.edu/imt/07-11-46.asp
+2026-03-07 22:27:32,130 [INFO] [ 223/264] https://avalon.law.yale.edu/imt/07-12-46.asp
+2026-03-07 22:27:33,888 [INFO] [ 224/264] https://avalon.law.yale.edu/imt/07-15-46.asp
+2026-03-07 22:27:35,631 [INFO] [ 225/264] https://avalon.law.yale.edu/imt/07-16-46.asp
+2026-03-07 22:27:37,693 [INFO] [ 226/264] https://avalon.law.yale.edu/imt/07-17-46.asp
+2026-03-07 22:27:39,406 [INFO] [ 227/264] https://avalon.law.yale.edu/imt/07-18-46.asp
+2026-03-07 22:27:41,217 [INFO] [ 228/264] https://avalon.law.yale.edu/imt/07-19-46.asp
+2026-03-07 22:27:43,006 [INFO] [ 229/264] https://avalon.law.yale.edu/imt/07-22-46.asp
+2026-03-07 22:27:44,759 [INFO] [ 230/264] https://avalon.law.yale.edu/imt/07-23-46.asp
+2026-03-07 22:27:46,770 [INFO] [ 231/264] https://avalon.law.yale.edu/imt/07-24-46.asp
+2026-03-07 22:27:48,499 [INFO] [ 232/264] https://avalon.law.yale.edu/imt/07-25-46.asp
+2026-03-07 22:27:50,259 [INFO] [ 233/264] https://avalon.law.yale.edu/imt/07-26-46.asp
+2026-03-07 22:27:52,065 [INFO] [ 234/264] https://avalon.law.yale.edu/imt/07-27-46.asp
+2026-03-07 22:27:53,797 [INFO] [ 235/264] https://avalon.law.yale.edu/imt/07-29-46.asp
+2026-03-07 22:27:55,633 [INFO] [ 236/264] https://avalon.law.yale.edu/imt/07-30-46.asp
+2026-03-07 22:27:57,378 [WARNING]   Flags: ['NO_PAGE_NUMBERS']
+2026-03-07 22:27:57,384 [INFO] [ 237/264] https://avalon.law.yale.edu/imt/07-31-46.asp
+2026-03-07 22:27:59,151 [WARNING]   Flags: ['NO_PAGE_NUMBERS']
+2026-03-07 22:27:59,156 [INFO] [ 238/264] https://avalon.law.yale.edu/imt/08-01-46.asp
+2026-03-07 22:28:00,933 [INFO] [ 239/264] https://avalon.law.yale.edu/imt/08-02-46.asp
+2026-03-07 22:28:02,684 [WARNING]   Flags: ['NO_PAGE_NUMBERS']
+2026-03-07 22:28:02,688 [INFO] [ 240/264] https://avalon.law.yale.edu/imt/08-03-46.asp
+2026-03-07 22:28:04,329 [WARNING]   Flags: ['NO_PAGE_NUMBERS']
+2026-03-07 22:28:04,332 [INFO] [ 241/264] https://avalon.law.yale.edu/imt/08-05-46.asp
+2026-03-07 22:28:06,176 [WARNING]   Flags: ['NO_PAGE_NUMBERS']
+2026-03-07 22:28:06,181 [INFO] [ 242/264] https://avalon.law.yale.edu/imt/08-06-46.asp
+2026-03-07 22:28:07,936 [WARNING]   Flags: ['NO_PAGE_NUMBERS']
+2026-03-07 22:28:07,943 [INFO] [ 243/264] https://avalon.law.yale.edu/imt/08-07-46.asp
+2026-03-07 22:28:11,149 [INFO] [ 244/264] https://avalon.law.yale.edu/imt/08-08-46.asp
+2026-03-07 22:28:11,780 [INFO] [ 245/264] https://avalon.law.yale.edu/imt/08-09-46.asp
+2026-03-07 22:28:13,619 [INFO] [ 246/264] https://avalon.law.yale.edu/imt/08-10-46.asp
+2026-03-07 22:28:15,295 [INFO] [ 247/264] https://avalon.law.yale.edu/imt/08-12-46.asp
+2026-03-07 22:28:17,080 [WARNING]   Flags: ['NO_PAGE_NUMBERS']
+2026-03-07 22:28:17,085 [INFO] [ 248/264] https://avalon.law.yale.edu/imt/08-13-46.asp
+2026-03-07 22:28:18,848 [WARNING]   Flags: ['NO_PAGE_NUMBERS']
+2026-03-07 22:28:18,854 [INFO] [ 249/264] https://avalon.law.yale.edu/imt/08-14-46.asp
+2026-03-07 22:28:20,557 [WARNING]   Flags: ['NO_PAGE_NUMBERS']
+2026-03-07 22:28:20,562 [INFO] [ 250/264] https://avalon.law.yale.edu/imt/08-15-46.asp
+2026-03-07 22:28:22,299 [WARNING]   Flags: ['NO_PAGE_NUMBERS']
+2026-03-07 22:28:22,303 [INFO] [ 251/264] https://avalon.law.yale.edu/imt/08-16-46.asp
+2026-03-07 22:28:24,138 [WARNING]   Flags: ['NO_PAGE_NUMBERS']
+2026-03-07 22:28:24,142 [INFO] [ 252/264] https://avalon.law.yale.edu/imt/08-19-46.asp
+2026-03-07 22:28:25,815 [WARNING]   Flags: ['NO_PAGE_NUMBERS']
+2026-03-07 22:28:25,818 [INFO] [ 253/264] https://avalon.law.yale.edu/imt/08-20-46.asp
+2026-03-07 22:28:27,629 [WARNING]   Flags: ['NO_SPEAKER_TURNS', 'NO_PAGE_NUMBERS']
+2026-03-07 22:28:27,630 [INFO] [ 254/264] https://avalon.law.yale.edu/imt/08-21-46.asp
+2026-03-07 22:28:29,390 [WARNING]   Flags: ['NO_SPEAKER_TURNS', 'NO_PAGE_NUMBERS']
+2026-03-07 22:28:29,391 [INFO] [ 255/264] https://avalon.law.yale.edu/imt/08-22-46.asp
+2026-03-07 22:28:31,221 [INFO] [ 256/264] https://avalon.law.yale.edu/imt/08-23-46.asp
+2026-03-07 22:28:33,024 [INFO] [ 257/264] https://avalon.law.yale.edu/imt/08-26-46.asp
+2026-03-07 22:28:35,065 [INFO] [ 258/264] https://avalon.law.yale.edu/imt/08-27-46.asp
+2026-03-07 22:28:37,018 [INFO] [ 259/264] https://avalon.law.yale.edu/imt/08-28-46.asp
+2026-03-07 22:28:39,025 [INFO] [ 260/264] https://avalon.law.yale.edu/imt/08-29-46.asp
+2026-03-07 22:28:41,040 [INFO] [ 261/264] https://avalon.law.yale.edu/imt/08-30-46.asp
+2026-03-07 22:28:43,089 [INFO] [ 262/264] https://avalon.law.yale.edu/imt/08-31-46.asp
+2026-03-07 22:28:44,774 [INFO] [ 263/264] https://avalon.law.yale.edu/imt/09-30-46.asp
+2026-03-07 22:28:46,975 [INFO] [ 264/264] https://avalon.law.yale.edu/imt/10-01-46.asp
+2026-03-07 22:28:48,990 [INFO] === PHASE 2: Judgment sub-pages ===
+2026-03-07 22:28:50,712 [INFO] Judgment menu: 70 sub-pages found
+2026-03-07 22:28:50,712 [INFO]   [ 1/70] https://avalon.law.yale.edu/imt/judgen.asp
+2026-03-07 22:28:52,442 [INFO]   [ 2/70] https://avalon.law.yale.edu/imt/judprov.asp
+2026-03-07 22:28:54,363 [INFO]   [ 3/70] https://avalon.law.yale.edu/imt/judnazi.asp
+2026-03-07 22:28:56,151 [INFO]   [ 4/70] https://avalon.law.yale.edu/imt/judnazi.asp#origin
+2026-03-07 22:28:57,899 [INFO]   [ 5/70] https://avalon.law.yale.edu/imt/judnazi.asp#consol
+2026-03-07 22:28:59,688 [INFO]   [ 6/70] https://avalon.law.yale.edu/imt/judnazi.asp#measures
+2026-03-07 22:29:01,441 [INFO]   [ 7/70] https://avalon.law.yale.edu/imt/judnazi.asp#common
+2026-03-07 22:29:03,196 [INFO]   [ 8/70] https://avalon.law.yale.edu/imt/judnazi.asp#prep
+2026-03-07 22:29:04,945 [INFO]   [ 9/70] https://avalon.law.yale.edu/imt/judnazi.asp#plan
+2026-03-07 22:29:06,690 [INFO]   [10/70] https://avalon.law.yale.edu/imt/judnazi.asp#conf
+2026-03-07 22:29:08,427 [INFO]   [11/70] https://avalon.law.yale.edu/imt/judaus.asp
+2026-03-07 22:29:10,139 [INFO]   [12/70] https://avalon.law.yale.edu/imt/judseize.asp
+2026-03-07 22:29:11,933 [INFO]   [13/70] https://avalon.law.yale.edu/imt/judpolan.asp
+2026-03-07 22:29:13,639 [INFO]   [14/70] https://avalon.law.yale.edu/imt/juddenma.asp
+2026-03-07 22:29:15,425 [INFO]   [15/70] https://avalon.law.yale.edu/imt/judbelg.asp
+2026-03-07 22:29:17,168 [INFO]   [16/70] https://avalon.law.yale.edu/imt/judyugo.asp
+2026-03-07 22:29:18,918 [INFO]   [17/70] https://avalon.law.yale.edu/imt/judsov.asp
+2026-03-07 22:29:20,665 [INFO]   [18/70] https://avalon.law.yale.edu/imt/judunite.asp
+2026-03-07 22:29:22,402 [INFO]   [19/70] https://avalon.law.yale.edu/imt/judviol.asp
+2026-03-07 22:29:24,170 [INFO]   [20/70] https://avalon.law.yale.edu/imt/judviol.asp#general
+2026-03-07 22:29:25,916 [INFO]   [21/70] https://avalon.law.yale.edu/imt/judviol.asp#hague
+2026-03-07 22:29:27,657 [INFO]   [22/70] https://avalon.law.yale.edu/imt/judviol.asp#treaties
+2026-03-07 22:29:29,390 [INFO]   [23/70] https://avalon.law.yale.edu/imt/judlawch.asp
+2026-03-07 22:29:31,134 [INFO]   [24/70] https://avalon.law.yale.edu/imt/judlawco.asp
+2026-03-07 22:29:32,874 [INFO]   [25/70] https://avalon.law.yale.edu/imt/judwarcr.asp
+2026-03-07 22:29:34,658 [INFO]   [26/70] https://avalon.law.yale.edu/imt/judwarcr.asp#general
+2026-03-07 22:29:36,384 [INFO]   [27/70] https://avalon.law.yale.edu/imt/judwarcr.asp#prisoners
+2026-03-07 22:29:38,187 [INFO]   [28/70] https://avalon.law.yale.edu/imt/judwarcr.asp#civilian
+2026-03-07 22:29:40,058 [INFO]   [29/70] https://avalon.law.yale.edu/imt/judwarcr.asp#slave
+2026-03-07 22:29:41,936 [INFO]   [30/70] https://avalon.law.yale.edu/imt/judwarcr.asp#persecution
+2026-03-07 22:29:43,723 [INFO]   [31/70] https://avalon.law.yale.edu/imt/judlawre.asp
+2026-03-07 22:29:45,425 [INFO]   [32/70] https://avalon.law.yale.edu/imt/judorg.asp
+2026-03-07 22:29:47,256 [INFO]   [33/70] https://avalon.law.yale.edu/imt/judorg.asp#general
+2026-03-07 22:29:49,012 [INFO]   [34/70] https://avalon.law.yale.edu/imt/judorg.asp#leadership
+2026-03-07 22:29:50,760 [INFO]   [35/70] https://avalon.law.yale.edu/imt/judorg.asp#gestapo
+2026-03-07 22:29:52,501 [INFO]   [36/70] https://avalon.law.yale.edu/imt/judorg.asp#ss
+2026-03-07 22:29:54,246 [INFO]   [37/70] https://avalon.law.yale.edu/imt/judorg.asp#sa
+2026-03-07 22:29:55,993 [INFO]   [38/70] https://avalon.law.yale.edu/imt/judorg.asp#reich
+2026-03-07 22:29:57,735 [INFO]   [39/70] https://avalon.law.yale.edu/imt/judorg.asp#staff
+2026-03-07 22:29:59,476 [INFO]   [40/70] https://avalon.law.yale.edu/imt/judgoeri.asp
+2026-03-07 22:30:01,190 [INFO]   [41/70] https://avalon.law.yale.edu/imt/judhess.asp
+2026-03-07 22:30:02,967 [INFO]   [42/70] https://avalon.law.yale.edu/imt/judribb.asp
+2026-03-07 22:30:04,707 [INFO]   [43/70] https://avalon.law.yale.edu/imt/judkeite.asp
+2026-03-07 22:30:06,458 [INFO]   [44/70] https://avalon.law.yale.edu/imt/judkalt.asp
+2026-03-07 22:30:08,203 [INFO]   [45/70] https://avalon.law.yale.edu/imt/judrosen.asp
+2026-03-07 22:30:09,975 [INFO]   [46/70] https://avalon.law.yale.edu/imt/judfrank.asp
+2026-03-07 22:30:11,968 [INFO]   [47/70] https://avalon.law.yale.edu/imt/judfrick.asp
+2026-03-07 22:30:13,693 [INFO]   [48/70] https://avalon.law.yale.edu/imt/judstrei.asp
+2026-03-07 22:30:15,458 [INFO]   [49/70] https://avalon.law.yale.edu/imt/judfunk.asp
+2026-03-07 22:30:17,209 [INFO]   [50/70] https://avalon.law.yale.edu/imt/judschac.asp
+2026-03-07 22:30:18,951 [INFO]   [51/70] https://avalon.law.yale.edu/imt/juddoeni.asp
+2026-03-07 22:30:20,703 [INFO]   [52/70] https://avalon.law.yale.edu/imt/judraede.asp
+2026-03-07 22:30:22,448 [INFO]   [53/70] https://avalon.law.yale.edu/imt/judschir.asp
+2026-03-07 22:30:24,287 [INFO]   [54/70] https://avalon.law.yale.edu/imt/judsauck.asp
+2026-03-07 22:30:26,037 [INFO]   [55/70] https://avalon.law.yale.edu/imt/judjodl.asp
+2026-03-07 22:30:27,784 [INFO]   [56/70] https://avalon.law.yale.edu/imt/judpapen.asp
+2026-03-07 22:30:29,525 [INFO]   [57/70] https://avalon.law.yale.edu/imt/judseyss.asp
+2026-03-07 22:30:31,284 [INFO]   [58/70] https://avalon.law.yale.edu/imt/judspeer.asp
+2026-03-07 22:30:33,033 [INFO]   [59/70] https://avalon.law.yale.edu/imt/judneur.asp
+2026-03-07 22:30:34,794 [INFO]   [60/70] https://avalon.law.yale.edu/imt/judfritz.asp
+2026-03-07 22:30:36,535 [INFO]   [61/70] https://avalon.law.yale.edu/imt/judborma.asp
+2026-03-07 22:30:38,332 [INFO]   [64/70] https://avalon.law.yale.edu/imt/juddiss.asp#general
+2026-03-07 22:30:40,113 [INFO]   [65/70] https://avalon.law.yale.edu/imt/juddiss.asp#schacht
+2026-03-07 22:30:42,166 [INFO]   [66/70] https://avalon.law.yale.edu/imt/juddiss.asp#papen
+2026-03-07 22:30:43,917 [INFO]   [67/70] https://avalon.law.yale.edu/imt/juddiss.asp#fritzsche
+2026-03-07 22:30:45,671 [INFO]   [68/70] https://avalon.law.yale.edu/imt/juddiss.asp#hess
+2026-03-07 22:30:47,403 [INFO]   [69/70] https://avalon.law.yale.edu/imt/juddiss.asp#reich
+2026-03-07 22:30:49,128 [INFO]   [70/70] https://avalon.law.yale.edu/imt/juddiss.asp#staff
+2026-03-07 22:30:51,125 [INFO] === PHASE 3: Key documents ===
+2026-03-07 22:30:51,126 [INFO]   jackson_report: https://avalon.law.yale.edu/imt/imt_jack01.asp
+2026-03-07 22:30:52,703 [INFO]   nuremberg_code: https://avalon.law.yale.edu/imt/nurecode.asp
+2026-03-07 22:30:54,487 [INFO]   royal_warrant: https://avalon.law.yale.edu/imt/imtroyal.asp
+2026-03-07 22:30:56,241 [INFO]   st_james: https://avalon.law.yale.edu/imt/imtjames.asp
+2026-03-07 22:30:57,985 [INFO]   jackson_statement: https://avalon.law.yale.edu/imt/imt_jack02.asp
+2026-03-07 22:30:59,821 [INFO]   stroop_report: https://avalon.law.yale.edu/imt/1061-ps.asp
+2026-03-07 22:31:01,758 [INFO]   wannsee: https://avalon.law.yale.edu/imt/wannsee.asp
+2026-03-07 22:31:03,416 [INFO]   final_report: https://avalon.law.yale.edu/imt/naeve.asp
+2026-03-07 22:31:06,257 [INFO] === PHASE 4: Secondary collections ===
+2026-03-07 22:31:06,257 [INFO]   Collection: motions
+2026-03-07 22:31:07,781 [INFO]   8 documents in motions
+2026-03-07 22:31:07,782 [INFO]     [  7] https://avalon.law.yale.edu/imt/01-02-46.asp#kaltmotion
+2026-03-07 22:31:09,900 [INFO]   Collection: orders
+2026-03-07 22:31:11,513 [INFO]   7 documents in orders
+2026-03-07 22:31:11,513 [INFO]   Collection: cases
+2026-03-07 22:31:13,328 [INFO]   19 documents in cases
+2026-03-07 22:31:13,328 [INFO]     [  1] https://avalon.law.yale.edu/imt/12-07-45.asp#austria1
+2026-03-07 22:31:15,783 [INFO]     [  2] https://avalon.law.yale.edu/imt/12-10-45.asp#usa
+2026-03-07 22:31:17,741 [INFO]     [  3] https://avalon.law.yale.edu/imt/12-13-45.asp#camps
+2026-03-07 22:31:19,792 [INFO]     [  5] https://avalon.law.yale.edu/imt/12-11-45.asp#forcedlabor
+2026-03-07 22:31:21,570 [INFO]     [  6] https://avalon.law.yale.edu/imt/01-04-46.asp#staff
+2026-03-07 22:31:23,467 [INFO]     [  7] https://avalon.law.yale.edu/imt/12-14-45.asp#harris
+2026-03-07 22:31:25,292 [INFO]     [  8] https://avalon.law.yale.edu/imt/12-20-45.asp#gestapo
+2026-03-07 22:31:27,352 [INFO]     [  9] https://avalon.law.yale.edu/imt/01-02-46.asp#kalt
+2026-03-07 22:31:29,120 [INFO]     [ 10] https://avalon.law.yale.edu/imt/12-17-45.asp#leadership
+2026-03-07 22:31:31,149 [INFO]     [ 11] https://avalon.law.yale.edu/imt/12-13-45.asp#jewishpersecution
+2026-03-07 22:31:33,294 [INFO]     [ 12] https://avalon.law.yale.edu/imt/12-18-45.asp#sa
+2026-03-07 22:31:35,582 [INFO]     [ 13] https://avalon.law.yale.edu/imt/12-19-45.asp#ss
+2026-03-07 22:31:37,855 [INFO]     [ 14] https://avalon.law.yale.edu/imt/12-05-45.asp#generaltreaties
+2026-03-07 22:31:40,241 [INFO]     [ 15] https://avalon.law.yale.edu/imt/12-07-45.asp#belgium1
+2026-03-07 22:31:42,509 [INFO]     [ 17] https://avalon.law.yale.edu/imt/12-06-45.asp#norway1
+2026-03-07 22:31:44,742 [INFO]     [ 18] https://avalon.law.yale.edu/imt/12-05-45.asp#griffith
+2026-03-07 22:31:46,429 [INFO]     [ 19] https://avalon.law.yale.edu/imt/12-07-45.asp#soviet1
+2026-03-07 22:31:48,277 [INFO]   Collection: witnesses
+2026-03-07 22:31:49,891 [INFO]   6 documents in witnesses
+2026-03-07 22:31:49,892 [INFO]     [  1] https://avalon.law.yale.edu/imt/01-04-46.asp#hollriegel
+2026-03-07 22:31:51,897 [INFO]     [  2] https://avalon.law.yale.edu/imt/12-01-45.asp#lahousen
+2026-03-07 22:31:53,534 [INFO]     [  3] https://avalon.law.yale.edu/imt/01-03-46.asp#ohlendorf
+2026-03-07 22:31:55,634 [INFO]     [  4] https://avalon.law.yale.edu/imt/01-04-46.asp#schellenberg
+2026-03-07 22:31:57,243 [INFO]     [  5] https://avalon.law.yale.edu/imt/01-03-46.asp#wisliceny
+2026-03-07 22:31:59,257 [INFO]     [  6] https://avalon.law.yale.edu/imt/01-07-46.asp#zelewski
+2026-03-07 22:32:01,297 [INFO]   Collection: jackson
+2026-03-07 22:32:02,968 [INFO]   68 documents in jackson
+2026-03-07 22:32:02,968 [INFO]     [  1] https://avalon.law.yale.edu/imt/jack_titlep.asp
+2026-03-07 22:32:04,721 [INFO]     [  2] https://avalon.law.yale.edu/imt/jack_letter.asp
+2026-03-07 22:32:06,479 [INFO]     [  3] https://avalon.law.yale.edu/imt/jack_foreword.asp
+2026-03-07 22:32:08,216 [INFO]     [  4] https://avalon.law.yale.edu/imt/jack_preface.asp
+2026-03-07 22:32:09,984 [INFO]     [  5] https://avalon.law.yale.edu/imt/jack01.asp
+2026-03-07 22:32:11,855 [INFO]     [  6] https://avalon.law.yale.edu/imt/jack02.asp
+2026-03-07 22:32:13,594 [INFO]     [  7] https://avalon.law.yale.edu/imt/jack03.asp
+2026-03-07 22:32:15,351 [INFO]     [  8] https://avalon.law.yale.edu/imt/jack04.asp
+2026-03-07 22:32:17,150 [INFO]     [  9] https://avalon.law.yale.edu/imt/jack05.asp
+2026-03-07 22:32:18,908 [INFO]     [ 10] https://avalon.law.yale.edu/imt/jack06.asp
+2026-03-07 22:32:20,753 [INFO]     [ 11] https://avalon.law.yale.edu/imt/jack07.asp
+2026-03-07 22:32:22,633 [INFO]     [ 12] https://avalon.law.yale.edu/imt/jack08.asp
+2026-03-07 22:32:24,468 [INFO]     [ 13] https://avalon.law.yale.edu/imt/jack09.asp
+2026-03-07 22:32:26,297 [INFO]     [ 14] https://avalon.law.yale.edu/imt/jack10.asp
+2026-03-07 22:32:28,107 [INFO]     [ 15] https://avalon.law.yale.edu/imt/jack11.asp
+2026-03-07 22:32:29,905 [INFO]     [ 16] https://avalon.law.yale.edu/imt/jack12.asp
+2026-03-07 22:32:31,660 [INFO]     [ 17] https://avalon.law.yale.edu/imt/jack13.asp
+2026-03-07 22:32:33,680 [INFO]     [ 18] https://avalon.law.yale.edu/imt/jack14.asp
+2026-03-07 22:32:35,409 [INFO]     [ 19] https://avalon.law.yale.edu/imt/jack15.asp
+2026-03-07 22:32:37,236 [INFO]     [ 20] https://avalon.law.yale.edu/imt/jack16.asp
+2026-03-07 22:32:39,001 [INFO]     [ 21] https://avalon.law.yale.edu/imt/jack17.asp
+2026-03-07 22:32:40,855 [INFO]     [ 22] https://avalon.law.yale.edu/imt/jack18.asp
+2026-03-07 22:32:42,600 [INFO]     [ 23] https://avalon.law.yale.edu/imt/jack19.asp
+2026-03-07 22:32:44,338 [INFO]     [ 24] https://avalon.law.yale.edu/imt/jack20.asp
+2026-03-07 22:32:46,102 [INFO]     [ 25] https://avalon.law.yale.edu/imt/jack21.asp
+2026-03-07 22:32:47,868 [INFO]     [ 26] https://avalon.law.yale.edu/imt/jack22.asp
+2026-03-07 22:32:49,598 [INFO]     [ 27] https://avalon.law.yale.edu/imt/jack23.asp
+2026-03-07 22:32:51,469 [INFO]     [ 28] https://avalon.law.yale.edu/imt/jack24.asp
+2026-03-07 22:32:53,230 [INFO]     [ 29] https://avalon.law.yale.edu/imt/jack25.asp
+2026-03-07 22:32:54,986 [INFO]     [ 30] https://avalon.law.yale.edu/imt/jack26.asp
+2026-03-07 22:32:56,724 [INFO]     [ 31] https://avalon.law.yale.edu/imt/jack27.asp
+2026-03-07 22:32:58,530 [INFO]     [ 32] https://avalon.law.yale.edu/imt/jack28.asp
+2026-03-07 22:33:00,227 [INFO]     [ 33] https://avalon.law.yale.edu/imt/jack29.asp
+2026-03-07 22:33:01,969 [INFO]     [ 34] https://avalon.law.yale.edu/imt/jack30.asp
+2026-03-07 22:33:03,755 [INFO]     [ 35] https://avalon.law.yale.edu/imt/jack31.asp
+2026-03-07 22:33:05,471 [INFO]     [ 36] https://avalon.law.yale.edu/imt/jack32.asp
+2026-03-07 22:33:07,235 [INFO]     [ 37] https://avalon.law.yale.edu/imt/jack33.asp
+2026-03-07 22:33:08,971 [INFO]     [ 38] https://avalon.law.yale.edu/imt/jack34.asp
+2026-03-07 22:33:10,699 [INFO]     [ 39] https://avalon.law.yale.edu/imt/jack35.asp
+2026-03-07 22:33:12,443 [INFO]     [ 40] https://avalon.law.yale.edu/imt/jack36.asp
+2026-03-07 22:33:14,175 [INFO]     [ 41] https://avalon.law.yale.edu/imt/jack37.asp
+2026-03-07 22:33:15,950 [INFO]     [ 42] https://avalon.law.yale.edu/imt/jack38.asp
+2026-03-07 22:33:17,676 [INFO]     [ 43] https://avalon.law.yale.edu/imt/jack39.asp
+2026-03-07 22:33:19,416 [INFO]     [ 44] https://avalon.law.yale.edu/imt/jack40.asp
+2026-03-07 22:33:21,158 [INFO]     [ 45] https://avalon.law.yale.edu/imt/jack41.asp
+2026-03-07 22:33:22,897 [INFO]     [ 46] https://avalon.law.yale.edu/imt/jack42.asp
+2026-03-07 22:33:24,636 [INFO]     [ 47] https://avalon.law.yale.edu/imt/jack43.asp
+2026-03-07 22:33:27,204 [INFO]     [ 48] https://avalon.law.yale.edu/imt/jack44.asp
+2026-03-07 22:33:29,863 [INFO]     [ 49] https://avalon.law.yale.edu/imt/jack45.asp
+2026-03-07 22:33:31,898 [INFO]     [ 50] https://avalon.law.yale.edu/imt/jack46.asp
+2026-03-07 22:33:33,610 [INFO]     [ 51] https://avalon.law.yale.edu/imt/jack47.asp
+2026-03-07 22:33:35,385 [INFO]     [ 52] https://avalon.law.yale.edu/imt/jack48.asp
+2026-03-07 22:33:37,095 [INFO]     [ 53] https://avalon.law.yale.edu/imt/jack49.asp
+2026-03-07 22:33:38,841 [INFO]     [ 54] https://avalon.law.yale.edu/imt/jack50.asp
+2026-03-07 22:33:40,579 [INFO]     [ 55] https://avalon.law.yale.edu/imt/jack51.asp
+2026-03-07 22:33:42,327 [INFO]     [ 56] https://avalon.law.yale.edu/imt/jack52.asp
+2026-03-07 22:33:44,063 [INFO]     [ 57] https://avalon.law.yale.edu/imt/jack53.asp
+2026-03-07 22:33:45,805 [INFO]     [ 58] https://avalon.law.yale.edu/imt/jack54.asp
+2026-03-07 22:33:47,541 [INFO]     [ 59] https://avalon.law.yale.edu/imt/jack55.asp
+2026-03-07 22:33:49,280 [INFO]     [ 60] https://avalon.law.yale.edu/imt/jack56.asp
+2026-03-07 22:33:51,016 [INFO]     [ 61] https://avalon.law.yale.edu/imt/jack57.asp
+2026-03-07 22:33:52,766 [INFO]     [ 62] https://avalon.law.yale.edu/imt/jack58.asp
+2026-03-07 22:33:54,503 [INFO]     [ 63] https://avalon.law.yale.edu/imt/jack59.asp
+2026-03-07 22:33:56,288 [INFO]     [ 64] https://avalon.law.yale.edu/imt/jack60.asp
+2026-03-07 22:33:58,018 [INFO]     [ 65] https://avalon.law.yale.edu/imt/jack61.asp
+2026-03-07 22:33:59,724 [INFO]     [ 66] https://avalon.law.yale.edu/imt/jack62.asp
+2026-03-07 22:34:01,466 [INFO]     [ 67] https://avalon.law.yale.edu/imt/jack63.asp
+2026-03-07 22:34:03,239 [INFO]     [ 68] https://avalon.law.yale.edu/imt/jack64.asp
+2026-03-07 22:34:04,975 [INFO]   Collection: pohl
+2026-03-07 22:34:06,701 [INFO]   6 documents in pohl
+2026-03-07 22:34:06,701 [INFO]     [  1] https://avalon.law.yale.edu/imt/order4.asp
+2026-03-07 22:34:08,466 [INFO]     [  2] https://avalon.law.yale.edu/imt/indict4.asp
+2026-03-07 22:34:10,221 [INFO]     [  3] https://avalon.law.yale.edu/imt/arrain4.asp
+2026-03-07 22:34:11,943 [INFO]     [  4] https://avalon.law.yale.edu/imt/open4.asp
+2026-03-07 22:34:13,788 [INFO]     [  5] https://avalon.law.yale.edu/imt/partiv-1.asp
+2026-03-07 22:34:15,466 [INFO]     [  6] https://avalon.law.yale.edu/imt/d1451-4.asp
+2026-03-07 22:34:17,195 [INFO]   Collection: nca_v1
+2026-03-07 22:34:18,930 [INFO]   15 documents in nca_v1
+2026-03-07 22:34:18,930 [INFO]     [  1] https://avalon.law.yale.edu/imt/nca_vol1_preface.asp
+2026-03-07 22:34:20,691 [INFO]     [  5] https://avalon.law.yale.edu/imt/chap_04.asp
+2026-03-07 22:34:22,498 [INFO]     [  6] https://avalon.law.yale.edu/imt/chap_05.asp
+2026-03-07 22:34:24,260 [INFO]     [  7] https://avalon.law.yale.edu/imt/chap_06.asp
+2026-03-07 22:34:25,970 [INFO]     [  8] https://avalon.law.yale.edu/imt/chap_07.asp
+2026-03-07 22:34:28,167 [INFO]     [  9] https://avalon.law.yale.edu/imt/chap_08.asp
+2026-03-07 22:34:29,691 [INFO]     [ 10] https://avalon.law.yale.edu/imt/chap_09.asp
+2026-03-07 22:34:33,608 [INFO]     [ 11] https://avalon.law.yale.edu/imt/chap_10.asp
+2026-03-07 22:34:35,163 [INFO]     [ 12] https://avalon.law.yale.edu/imt/chap_11.asp
+2026-03-07 22:34:36,813 [INFO]     [ 13] https://avalon.law.yale.edu/imt/chap_12.asp
+2026-03-07 22:34:38,808 [INFO]     [ 14] https://avalon.law.yale.edu/imt/chap_13.asp
+2026-03-07 22:34:41,110 [INFO]     [ 15] https://avalon.law.yale.edu/imt/chap_14.asp
+2026-03-07 22:34:42,800 [INFO]   Collection: nca_v2
+2026-03-07 22:34:44,485 [INFO]   23 documents in nca_v2
+2026-03-07 22:34:44,485 [INFO]     [  1] https://avalon.law.yale.edu/imt/chap15_part01.asp
+2026-03-07 22:34:46,492 [INFO]     [  2] https://avalon.law.yale.edu/imt/chap15_part02.asp
+2026-03-07 22:34:48,761 [INFO]     [  3] https://avalon.law.yale.edu/imt/chap15_part03.asp
+2026-03-07 22:34:50,707 [INFO]     [  4] https://avalon.law.yale.edu/imt/chap15_part04.asp
+2026-03-07 22:34:52,678 [INFO]     [  5] https://avalon.law.yale.edu/imt/chap15_part05.asp
+2026-03-07 22:34:54,902 [INFO]     [  6] https://avalon.law.yale.edu/imt/chap15_part06.asp
+2026-03-07 22:34:57,309 [INFO]     [  7] https://avalon.law.yale.edu/imt/chap15_part07.asp
+2026-03-07 22:35:01,258 [INFO]     [  8] https://avalon.law.yale.edu/imt/chap16_part01.asp
+2026-03-07 22:35:03,371 [INFO]     [  9] https://avalon.law.yale.edu/imt/chap16_part02.asp
+2026-03-07 22:35:05,081 [INFO]     [ 10] https://avalon.law.yale.edu/imt/chap16_part03.asp
+2026-03-07 22:35:06,850 [INFO]     [ 11] https://avalon.law.yale.edu/imt/chap16_part04.asp
+2026-03-07 22:35:08,600 [INFO]     [ 12] https://avalon.law.yale.edu/imt/chap16_part05.asp
+2026-03-07 22:35:10,294 [INFO]     [ 13] https://avalon.law.yale.edu/imt/chap16_part06.asp
+2026-03-07 22:35:12,056 [INFO]     [ 14] https://avalon.law.yale.edu/imt/chap16_part07.asp
+2026-03-07 22:35:13,838 [INFO]     [ 15] https://avalon.law.yale.edu/imt/chap16_part08.asp
+2026-03-07 22:35:15,603 [INFO]     [ 16] https://avalon.law.yale.edu/imt/chap16_part09.asp
+2026-03-07 22:35:17,558 [INFO]     [ 17] https://avalon.law.yale.edu/imt/chap16_part10.asp
+2026-03-07 22:35:19,291 [INFO]     [ 18] https://avalon.law.yale.edu/imt/chap16_part11.asp
+2026-03-07 22:35:21,021 [INFO]     [ 19] https://avalon.law.yale.edu/imt/chap16_part12.asp
+2026-03-07 22:35:22,798 [INFO]     [ 20] https://avalon.law.yale.edu/imt/chap16_part13.asp
+2026-03-07 22:35:24,566 [INFO]     [ 21] https://avalon.law.yale.edu/imt/chap16_part14.asp
+2026-03-07 22:35:26,310 [INFO]     [ 22] https://avalon.law.yale.edu/imt/chap16_part15.asp
+2026-03-07 22:35:28,076 [INFO]     [ 23] https://avalon.law.yale.edu/imt/chap16_part16.asp
+2026-03-07 22:35:29,817 [INFO]   Collection: nca_v3
+2026-03-07 22:35:31,530 [INFO]   32 documents in nca_v3
+2026-03-07 22:35:31,531 [INFO]     [  1] https://avalon.law.yale.edu/imt/001-ps.asp
+2026-03-07 22:35:33,292 [INFO]     [  2] https://avalon.law.yale.edu/imt/002-ps.asp
+2026-03-07 22:35:35,072 [INFO]     [  3] https://avalon.law.yale.edu/imt/003-ps.asp
+2026-03-07 22:35:36,840 [INFO]     [  4] https://avalon.law.yale.edu/imt/004-ps.asp
+2026-03-07 22:35:38,549 [INFO]     [  5] https://avalon.law.yale.edu/imt/007-ps.asp
+2026-03-07 22:35:40,380 [INFO]     [  6] https://avalon.law.yale.edu/imt/007-ps.asp#annex1
+2026-03-07 22:35:42,129 [INFO]     [  7] https://avalon.law.yale.edu/imt/007-ps.asp#annex2
+2026-03-07 22:35:43,866 [INFO]     [  8] https://avalon.law.yale.edu/imt/014-ps.asp
+2026-03-07 22:35:45,594 [INFO]     [  9] https://avalon.law.yale.edu/imt/015-ps.asp
+2026-03-07 22:35:47,356 [INFO]     [ 10] https://avalon.law.yale.edu/imt/015-ps.asp#inter
+2026-03-07 22:35:49,113 [INFO]     [ 11] https://avalon.law.yale.edu/imt/016-PS.asp
+2026-03-07 22:35:50,893 [INFO]     [ 12] https://avalon.law.yale.edu/imt/017-ps.asp
+2026-03-07 22:35:52,624 [INFO]     [ 13] https://avalon.law.yale.edu/imt/018-ps.asp
+2026-03-07 22:35:54,382 [INFO]     [ 14] https://avalon.law.yale.edu/imt/019-ps.asp
+2026-03-07 22:35:56,132 [INFO]     [ 15] https://avalon.law.yale.edu/imt/025-ps.asp
+2026-03-07 22:35:57,884 [INFO]     [ 16] https://avalon.law.yale.edu/imt/031-ps.asp
+2026-03-07 22:35:59,636 [INFO]     [ 17] https://avalon.law.yale.edu/imt/047-ps.asp
+2026-03-07 22:36:01,384 [INFO]     [ 18] https://avalon.law.yale.edu/imt/053-ps.asp
+2026-03-07 22:36:03,144 [INFO]     [ 19] https://avalon.law.yale.edu/imt/054-ps.asp
+2026-03-07 22:36:04,913 [INFO]     [ 20] https://avalon.law.yale.edu/imt/057-ps.asp
+2026-03-07 22:36:06,650 [INFO]     [ 21] https://avalon.law.yale.edu/imt/058-ps.asp
+2026-03-07 22:36:08,418 [INFO]     [ 22] https://avalon.law.yale.edu/imt/061-ps.asp
+2026-03-07 22:36:10,180 [INFO]     [ 23] https://avalon.law.yale.edu/imt/062-ps.asp
+2026-03-07 22:36:11,932 [INFO]     [ 24] https://avalon.law.yale.edu/imt/064-ps.asp
+2026-03-07 22:36:13,769 [INFO]     [ 25] https://avalon.law.yale.edu/imt/066-ps.asp
+2026-03-07 22:36:15,521 [INFO]     [ 26] https://avalon.law.yale.edu/imt/068-ps.asp
+2026-03-07 22:36:17,256 [INFO]     [ 27] https://avalon.law.yale.edu/imt/069-ps.asp
+2026-03-07 22:36:19,005 [INFO]     [ 28] https://avalon.law.yale.edu/imt/070-ps.asp
+2026-03-07 22:36:20,739 [INFO]     [ 29] https://avalon.law.yale.edu/imt/071-ps.asp
+2026-03-07 22:36:22,511 [INFO]     [ 30] https://avalon.law.yale.edu/imt/072-ps.asp
+2026-03-07 22:36:24,262 [INFO]     [ 31] https://avalon.law.yale.edu/imt/078-ps.asp
+2026-03-07 22:36:26,116 [INFO]   Collection: nca_v4
+2026-03-07 22:36:27,921 [INFO]   297 documents in nca_v4
+2026-03-07 22:36:27,921 [INFO]     [  1] https://avalon.law.yale.edu/imt/1409-ps.asp
+2026-03-07 22:36:29,636 [INFO]     [  2] https://avalon.law.yale.edu/imt/1412-ps.asp
+2026-03-07 22:36:31,406 [INFO]     [  3] https://avalon.law.yale.edu/imt/1415-ps.asp
+2026-03-07 22:36:33,155 [INFO]     [  4] https://avalon.law.yale.edu/imt/1416-ps.asp
+2026-03-07 22:36:34,897 [INFO]     [  5] https://avalon.law.yale.edu/imt/1417-ps.asp
+2026-03-07 22:36:36,646 [INFO]     [  6] https://avalon.law.yale.edu/imt/1419-ps.asp
+2026-03-07 22:36:38,424 [INFO]     [  7] https://avalon.law.yale.edu/imt/1422-PS.asp
+2026-03-07 22:36:40,175 [INFO]     [  8] https://avalon.law.yale.edu/imt/1430-ps.asp
+2026-03-07 22:36:41,916 [INFO]     [  9] https://avalon.law.yale.edu/imt/1435-ps.asp
+2026-03-07 22:36:43,761 [INFO]     [ 10] https://avalon.law.yale.edu/imt/1437-ps.asp
+2026-03-07 22:36:45,409 [INFO]     [ 11] https://avalon.law.yale.edu/imt/1438-ps.asp
+2026-03-07 22:36:47,179 [INFO]     [ 12] https://avalon.law.yale.edu/imt/1439-ps.asp
+2026-03-07 22:36:48,987 [INFO]     [ 13] https://avalon.law.yale.edu/imt/1445-ps.asp
+2026-03-07 22:36:50,765 [INFO]     [ 14] https://avalon.law.yale.edu/imt/1456-ps.asp
+2026-03-07 22:36:52,470 [INFO]     [ 15] https://avalon.law.yale.edu/imt/1458-ps.asp
+2026-03-07 22:36:54,263 [INFO]     [ 16] https://avalon.law.yale.edu/imt/1462-ps.asp
+2026-03-07 22:36:55,978 [INFO]     [ 17] https://avalon.law.yale.edu/imt/1463-ps.asp
+2026-03-07 22:36:57,726 [INFO]     [ 18] https://avalon.law.yale.edu/imt/1472-ps.asp
+2026-03-07 22:36:59,465 [INFO]     [ 19] https://avalon.law.yale.edu/imt/1481-ps.asp
+2026-03-07 22:37:01,233 [INFO]     [ 20] https://avalon.law.yale.edu/imt/1482-ps.asp
+2026-03-07 22:37:03,001 [INFO]     [ 21] https://avalon.law.yale.edu/imt/1498-ps.asp
+2026-03-07 22:37:04,815 [INFO]     [ 22] https://avalon.law.yale.edu/imt/1514-ps.asp
+2026-03-07 22:37:06,489 [INFO]     [ 23] https://avalon.law.yale.edu/imt/1517-ps.asp
+2026-03-07 22:37:08,267 [INFO]     [ 24] https://avalon.law.yale.edu/imt/1519-ps.asp
+2026-03-07 22:37:10,116 [INFO]     [ 25] https://avalon.law.yale.edu/imt/1520-ps.asp
+2026-03-07 22:37:11,855 [INFO]     [ 26] https://avalon.law.yale.edu/imt/1521-ps.asp
+2026-03-07 22:37:13,649 [INFO]     [ 27] https://avalon.law.yale.edu/imt/1526-ps.asp
+2026-03-07 22:37:15,490 [INFO]     [ 28] https://avalon.law.yale.edu/imt/1531-ps.asp
+2026-03-07 22:37:17,222 [INFO]     [ 29] https://avalon.law.yale.edu/imt/1534-ps.asp
+2026-03-07 22:37:18,934 [INFO]     [ 30] https://avalon.law.yale.edu/imt/1536-ps.asp
+2026-03-07 22:37:20,685 [INFO]     [ 31] https://avalon.law.yale.edu/imt/1538-ps.asp
+2026-03-07 22:37:22,438 [INFO]     [ 32] https://avalon.law.yale.edu/imt/1541-ps.asp
+2026-03-07 22:37:24,212 [INFO]     [ 33] https://avalon.law.yale.edu/imt/1544-ps.asp
+2026-03-07 22:37:25,931 [INFO]     [ 34] https://avalon.law.yale.edu/imt/1546-ps.asp
+2026-03-07 22:37:27,839 [INFO]     [ 35] https://avalon.law.yale.edu/imt/1551-ps.asp
+2026-03-07 22:37:29,593 [INFO]     [ 36] https://avalon.law.yale.edu/imt/1556-ps.asp
+2026-03-07 22:37:31,369 [INFO]     [ 37] https://avalon.law.yale.edu/imt/1573-ps.asp
+2026-03-07 22:37:33,121 [INFO]     [ 38] https://avalon.law.yale.edu/imt/1574-ps.asp
+2026-03-07 22:37:34,835 [INFO]     [ 39] https://avalon.law.yale.edu/imt/1582-ps.asp
+2026-03-07 22:37:36,596 [INFO]     [ 40] https://avalon.law.yale.edu/imt/1583-ps.asp
+2026-03-07 22:37:38,394 [INFO]     [ 41] https://avalon.law.yale.edu/imt/1584-I-ps.asp
+2026-03-07 22:37:40,130 [INFO]     [ 42] https://avalon.law.yale.edu/imt/1584-III-ps.asp
+2026-03-07 22:37:41,924 [INFO]     [ 43] https://avalon.law.yale.edu/imt/1590-ps.asp
+2026-03-07 22:37:43,662 [INFO]     [ 44] https://avalon.law.yale.edu/imt/1600-ps.asp
+2026-03-07 22:37:45,474 [INFO]     [ 45] https://avalon.law.yale.edu/imt/1602-ps.asp
+2026-03-07 22:37:47,517 [INFO]     [ 46] https://avalon.law.yale.edu/imt/1616-ps.asp
+2026-03-07 22:37:49,307 [INFO]     [ 47] https://avalon.law.yale.edu/imt/1617-ps.asp
+2026-03-07 22:37:51,054 [INFO]     [ 48] https://avalon.law.yale.edu/imt/1618-ps.asp
+2026-03-07 22:37:52,874 [INFO]     [ 49] https://avalon.law.yale.edu/imt/1621-ps.asp
+2026-03-07 22:37:54,757 [INFO]     [ 50] https://avalon.law.yale.edu/imt/1637-ps.asp
+2026-03-07 22:37:56,498 [INFO]     [ 51] https://avalon.law.yale.edu/imt/1638-ps.asp
+2026-03-07 22:37:58,345 [INFO]     [ 52] https://avalon.law.yale.edu/imt/1639-A-ps.asp
+2026-03-07 22:38:00,179 [INFO]     [ 53] https://avalon.law.yale.edu/imt/1642-ps.asp
+2026-03-07 22:38:01,869 [INFO]     [ 54] https://avalon.law.yale.edu/imt/1643-ps.asp
+2026-03-07 22:38:03,596 [INFO]     [ 55] https://avalon.law.yale.edu/imt/1650-ps.asp
+2026-03-07 22:38:06,241 [INFO]     [ 56] https://avalon.law.yale.edu/imt/1652-ps.asp
+2026-03-07 22:38:07,208 [INFO]     [ 57] https://avalon.law.yale.edu/imt/1653-ps.asp
+2026-03-07 22:38:09,026 [INFO]     [ 58] https://avalon.law.yale.edu/imt/1654-ps.asp
+2026-03-07 22:38:10,735 [INFO]     [ 59] https://avalon.law.yale.edu/imt/1659-ps.asp
+2026-03-07 22:38:12,458 [INFO]     [ 60] https://avalon.law.yale.edu/imt/1660-ps.asp
+2026-03-07 22:38:14,222 [INFO]     [ 61] https://avalon.law.yale.edu/imt/1662-ps.asp
+2026-03-07 22:38:15,999 [INFO]     [ 62] https://avalon.law.yale.edu/imt/1665-ps.asp
+2026-03-07 22:38:17,785 [INFO]     [ 63] https://avalon.law.yale.edu/imt/1666-ps.asp
+2026-03-07 22:38:19,503 [INFO]     [ 64] https://avalon.law.yale.edu/imt/1669-ps.asp
+2026-03-07 22:38:21,261 [INFO]     [ 65] https://avalon.law.yale.edu/imt/1674-ps.asp
+2026-03-07 22:38:23,041 [INFO]     [ 66] https://avalon.law.yale.edu/imt/1676-ps.asp
+2026-03-07 22:38:24,779 [INFO]     [ 67] https://avalon.law.yale.edu/imt/1678-ps.asp
+2026-03-07 22:38:26,512 [INFO]     [ 68] https://avalon.law.yale.edu/imt/1680-ps.asp
+2026-03-07 22:38:28,270 [INFO]     [ 69] https://avalon.law.yale.edu/imt/1689-ps.asp
+2026-03-07 22:38:30,020 [INFO]     [ 70] https://avalon.law.yale.edu/imt/1696-ps.asp
+2026-03-07 22:38:31,760 [INFO]     [ 71] https://avalon.law.yale.edu/imt/1701-ps.asp
+2026-03-07 22:38:33,514 [INFO]     [ 72] https://avalon.law.yale.edu/imt/1702-ps.asp
+2026-03-07 22:38:35,276 [INFO]     [ 73] https://avalon.law.yale.edu/imt/1708-ps.asp
+2026-03-07 22:38:37,040 [INFO]     [ 74] https://avalon.law.yale.edu/imt/1709-ps.asp
+2026-03-07 22:38:38,797 [INFO]     [ 75] https://avalon.law.yale.edu/imt/1721-ps.asp
+2026-03-07 22:38:40,532 [INFO]     [ 76] https://avalon.law.yale.edu/imt/1723-ps.asp
+2026-03-07 22:38:42,266 [INFO]     [ 77] https://avalon.law.yale.edu/imt/1724-ps.asp
+2026-03-07 22:38:44,013 [INFO]     [ 78] https://avalon.law.yale.edu/imt/1725-ps.asp
+2026-03-07 22:38:45,765 [INFO]     [ 79] https://avalon.law.yale.edu/imt/1726-ps.asp
+2026-03-07 22:38:47,496 [INFO]     [ 80] https://avalon.law.yale.edu/imt/1741-ps.asp
+2026-03-07 22:38:49,662 [INFO]     [ 81] https://avalon.law.yale.edu/imt/1742-ps.asp
+2026-03-07 22:38:51,377 [INFO]     [ 82] https://avalon.law.yale.edu/imt/1743-ps.asp
+2026-03-07 22:38:53,168 [INFO]     [ 83] https://avalon.law.yale.edu/imt/1746-ps.asp
+2026-03-07 22:38:54,904 [INFO]     [ 84] https://avalon.law.yale.edu/imt/1751-ps.asp
+2026-03-07 22:38:56,638 [INFO]     [ 85] https://avalon.law.yale.edu/imt/1752-ps.asp
+2026-03-07 22:38:58,392 [INFO]     [ 86] https://avalon.law.yale.edu/imt/1757-ps.asp
+2026-03-07 22:39:00,129 [INFO]     [ 87] https://avalon.law.yale.edu/imt/1759-ps.asp
+2026-03-07 22:39:02,014 [INFO]     [ 88] https://avalon.law.yale.edu/imt/1760-ps.asp
+2026-03-07 22:39:03,785 [INFO]     [ 89] https://avalon.law.yale.edu/imt/1765-ps.asp
+2026-03-07 22:39:05,648 [INFO]     [ 90] https://avalon.law.yale.edu/imt/1770-ps.asp
+2026-03-07 22:39:07,498 [INFO]     [ 91] https://avalon.law.yale.edu/imt/1773-ps.asp
+2026-03-07 22:39:09,286 [INFO]     [ 92] https://avalon.law.yale.edu/imt/1774-ps.asp
+2026-03-07 22:39:11,105 [INFO]     [ 93] https://avalon.law.yale.edu/imt/1775-ps.asp
+2026-03-07 22:39:12,923 [INFO]     [ 94] https://avalon.law.yale.edu/imt/1778-ps.asp
+2026-03-07 22:39:14,742 [INFO]     [ 95] https://avalon.law.yale.edu/imt/1780-ps.asp
+2026-03-07 22:39:16,481 [INFO]     [ 96] https://avalon.law.yale.edu/imt/1786-ps.asp
+2026-03-07 22:39:18,363 [INFO]     [ 97] https://avalon.law.yale.edu/imt/1796-ps.asp
+2026-03-07 22:39:20,182 [INFO]     [ 98] https://avalon.law.yale.edu/imt/1799-ps.asp
+2026-03-07 22:39:22,362 [INFO]     [ 99] https://avalon.law.yale.edu/imt/1800-ps.asp
+2026-03-07 22:39:24,115 [INFO]     [100] https://avalon.law.yale.edu/imt/1807-ps.asp
+2026-03-07 22:39:25,861 [INFO]     [101] https://avalon.law.yale.edu/imt/1808-ps.asp
+2026-03-07 22:39:27,595 [INFO]     [102] https://avalon.law.yale.edu/imt/1809-ps.asp
+2026-03-07 22:39:29,461 [INFO]     [103] https://avalon.law.yale.edu/imt/1814-ps.asp
+2026-03-07 22:39:31,110 [INFO]     [104] https://avalon.law.yale.edu/imt/1815-ps.asp
+2026-03-07 22:39:32,866 [INFO]     [105] https://avalon.law.yale.edu/imt/1816-ps.asp
+2026-03-07 22:39:34,637 [INFO]     [106] https://avalon.law.yale.edu/imt/1817-ps.asp
+2026-03-07 22:39:36,322 [INFO]     [107] https://avalon.law.yale.edu/imt/1818-ps.asp
+2026-03-07 22:39:38,067 [INFO]     [108] https://avalon.law.yale.edu/imt/1822-ps.asp
+2026-03-07 22:39:39,809 [INFO]     [109] https://avalon.law.yale.edu/imt/1823-ps.asp
+2026-03-07 22:39:41,570 [INFO]     [110] https://avalon.law.yale.edu/imt/1828-ps.asp
+2026-03-07 22:39:43,302 [INFO]     [111] https://avalon.law.yale.edu/imt/1831-ps.asp
+2026-03-07 22:39:45,060 [INFO]     [112] https://avalon.law.yale.edu/imt/1832-ps.asp
+2026-03-07 22:39:46,896 [INFO]     [113] https://avalon.law.yale.edu/imt/1834-ps.asp
+2026-03-07 22:39:48,865 [INFO]     [114] https://avalon.law.yale.edu/imt/1835-ps.asp
+2026-03-07 22:39:50,689 [INFO]     [115] https://avalon.law.yale.edu/imt/1842-ps.asp
+2026-03-07 22:39:52,482 [INFO]     [116] https://avalon.law.yale.edu/imt/1850-ps.asp
+2026-03-07 22:39:54,236 [INFO]     [117] https://avalon.law.yale.edu/imt/1851-ps.asp
+2026-03-07 22:39:56,060 [INFO]     [118] https://avalon.law.yale.edu/imt/1852-ps.asp
+2026-03-07 22:39:57,932 [INFO]     [119] https://avalon.law.yale.edu/imt/1855-ps.asp
+2026-03-07 22:39:59,824 [INFO]     [120] https://avalon.law.yale.edu/imt/1856-ps.asp
+2026-03-07 22:40:01,725 [INFO]     [121] https://avalon.law.yale.edu/imt/1857-ps.asp
+2026-03-07 22:40:03,594 [INFO]     [122] https://avalon.law.yale.edu/imt/1861-ps.asp
+2026-03-07 22:40:05,457 [INFO]     [123] https://avalon.law.yale.edu/imt/1862-ps.asp
+2026-03-07 22:40:07,139 [INFO]     [124] https://avalon.law.yale.edu/imt/1866-ps.asp
+2026-03-07 22:40:09,063 [INFO]     [125] https://avalon.law.yale.edu/imt/1871-ps.asp
+2026-03-07 22:40:10,874 [INFO]     [126] https://avalon.law.yale.edu/imt/1874-ps.asp
+2026-03-07 22:40:12,703 [INFO]     [127] https://avalon.law.yale.edu/imt/1877-ps.asp
+2026-03-07 22:40:14,476 [INFO]     [128] https://avalon.law.yale.edu/imt/1881-ps.asp
+2026-03-07 22:40:16,224 [INFO]     [129] https://avalon.law.yale.edu/imt/1882-ps.asp
+2026-03-07 22:40:17,970 [INFO]     [130] https://avalon.law.yale.edu/imt/1889-ps.asp
+2026-03-07 22:40:19,716 [INFO]     [131] https://avalon.law.yale.edu/imt/1893-ps.asp
+2026-03-07 22:40:21,512 [INFO]     [132] https://avalon.law.yale.edu/imt/1903-ps.asp
+2026-03-07 22:40:23,236 [INFO]     [133] https://avalon.law.yale.edu/imt/1913-ps.asp
+2026-03-07 22:40:25,007 [INFO]     [134] https://avalon.law.yale.edu/imt/1956-ps.asp
+2026-03-07 22:40:26,732 [INFO]     [135] https://avalon.law.yale.edu/imt/1961-ps.asp
+2026-03-07 22:40:28,488 [INFO]     [136] https://avalon.law.yale.edu/imt/1962-ps.asp
+2026-03-07 22:40:30,337 [INFO]     [137] https://avalon.law.yale.edu/imt/1964-ps.asp
+2026-03-07 22:40:32,223 [INFO]     [138] https://avalon.law.yale.edu/imt/1965-ps.asp
+2026-03-07 22:40:33,969 [INFO]     [139] https://avalon.law.yale.edu/imt/1969-ps.asp
+2026-03-07 22:40:35,716 [INFO]     [140] https://avalon.law.yale.edu/imt/1972-ps.asp
+2026-03-07 22:40:37,461 [INFO]     [141] https://avalon.law.yale.edu/imt/1991-ps.asp
+2026-03-07 22:40:39,215 [INFO]     [142] https://avalon.law.yale.edu/imt/1992-ps.asp
+2026-03-07 22:40:41,020 [INFO]     [143] https://avalon.law.yale.edu/imt/1992-A-ps.asp
+2026-03-07 22:40:42,776 [INFO]     [144] https://avalon.law.yale.edu/imt/1997-ps.asp
+2026-03-07 22:40:44,669 [INFO]     [145] https://avalon.law.yale.edu/imt/2000-ps.asp
+2026-03-07 22:40:46,386 [INFO]     [146] https://avalon.law.yale.edu/imt/2001-ps.asp
+2026-03-07 22:40:48,247 [INFO]     [147] https://avalon.law.yale.edu/imt/2003-ps.asp
+2026-03-07 22:40:50,147 [INFO]     [148] https://avalon.law.yale.edu/imt/2004-ps.asp
+2026-03-07 22:40:51,954 [INFO]     [149] https://avalon.law.yale.edu/imt/2005-ps.asp
+2026-03-07 22:40:53,695 [INFO]     [150] https://avalon.law.yale.edu/imt/2006-ps.asp
+2026-03-07 22:40:55,533 [INFO]     [151] https://avalon.law.yale.edu/imt/2008-ps.asp
+2026-03-07 22:40:57,505 [INFO]     [152] https://avalon.law.yale.edu/imt/2012-ps.asp
+2026-03-07 22:40:59,309 [INFO]     [153] https://avalon.law.yale.edu/imt/2014-ps.asp
+2026-03-07 22:41:01,440 [INFO]     [154] https://avalon.law.yale.edu/imt/2016-ps.asp
+2026-03-07 22:41:03,180 [INFO]     [155] https://avalon.law.yale.edu/imt/2018-ps.asp
+2026-03-07 22:41:04,938 [INFO]     [156] https://avalon.law.yale.edu/imt/2022-ps.asp
+2026-03-07 22:41:06,752 [INFO]     [157] https://avalon.law.yale.edu/imt/2029-ps.asp
+2026-03-07 22:41:08,589 [INFO]     [158] https://avalon.law.yale.edu/imt/2030-ps.asp
+2026-03-07 22:41:10,336 [INFO]     [159] https://avalon.law.yale.edu/imt/2031-ps.asp
+2026-03-07 22:41:12,107 [INFO]     [160] https://avalon.law.yale.edu/imt/2039-ps.asp
+2026-03-07 22:41:13,959 [INFO]     [161] https://avalon.law.yale.edu/imt/2047-ps.asp
+2026-03-07 22:41:15,999 [INFO]     [162] https://avalon.law.yale.edu/imt/2048-ps.asp
+2026-03-07 22:41:18,291 [INFO]     [163] https://avalon.law.yale.edu/imt/2049-ps.asp
+2026-03-07 22:41:20,127 [INFO]     [164] https://avalon.law.yale.edu/imt/2050-ps.asp
+2026-03-07 22:41:22,068 [INFO]     [165] https://avalon.law.yale.edu/imt/2056-ps.asp
+2026-03-07 22:41:23,746 [INFO]     [166] https://avalon.law.yale.edu/imt/2057-ps.asp
+2026-03-07 22:41:25,638 [INFO]     [167] https://avalon.law.yale.edu/imt/2058-ps.asp
+2026-03-07 22:41:27,386 [INFO]     [168] https://avalon.law.yale.edu/imt/2059-ps.asp
+2026-03-07 22:41:29,189 [INFO]     [169] https://avalon.law.yale.edu/imt/2061-ps.asp
+2026-03-07 22:41:31,016 [INFO]     [170] https://avalon.law.yale.edu/imt/2073-ps.asp
+2026-03-07 22:41:32,823 [INFO]     [171] https://avalon.law.yale.edu/imt/2075-ps.asp
+2026-03-07 22:41:34,631 [INFO]     [172] https://avalon.law.yale.edu/imt/2076-ps.asp
+2026-03-07 22:41:36,372 [INFO]     [173] https://avalon.law.yale.edu/imt/2078-ps.asp
+2026-03-07 22:41:38,107 [INFO]     [174] https://avalon.law.yale.edu/imt/2079-ps.asp
+2026-03-07 22:41:39,874 [INFO]     [175] https://avalon.law.yale.edu/imt/2082-ps.asp
+2026-03-07 22:41:41,609 [INFO]     [176] https://avalon.law.yale.edu/imt/2083-ps.asp
+2026-03-07 22:41:43,415 [INFO]     [177] https://avalon.law.yale.edu/imt/2084-ps.asp
+2026-03-07 22:41:45,100 [INFO]     [178] https://avalon.law.yale.edu/imt/2088-ps.asp
+2026-03-07 22:41:46,909 [INFO]     [179] https://avalon.law.yale.edu/imt/2089-ps.asp
+2026-03-07 22:41:48,803 [INFO]     [180] https://avalon.law.yale.edu/imt/2090-ps.asp
+2026-03-07 22:41:50,774 [INFO]     [181] https://avalon.law.yale.edu/imt/2091-ps.asp
+2026-03-07 22:41:52,669 [INFO]     [182] https://avalon.law.yale.edu/imt/2092-ps.asp
+2026-03-07 22:41:54,497 [INFO]     [183] https://avalon.law.yale.edu/imt/2093-ps.asp
+2026-03-07 22:41:56,301 [INFO]     [184] https://avalon.law.yale.edu/imt/2094-ps.asp
+2026-03-07 22:41:58,054 [INFO]     [185] https://avalon.law.yale.edu/imt/2095-ps.asp
+2026-03-07 22:41:59,823 [INFO]     [186] https://avalon.law.yale.edu/imt/2097-ps.asp
+2026-03-07 22:42:01,566 [INFO]     [187] https://avalon.law.yale.edu/imt/2098-ps.asp
+2026-03-07 22:42:03,345 [INFO]     [188] https://avalon.law.yale.edu/imt/2099-ps.asp
+2026-03-07 22:42:05,161 [INFO]     [189] https://avalon.law.yale.edu/imt/2100-ps.asp
+2026-03-07 22:42:07,001 [INFO]     [190] https://avalon.law.yale.edu/imt/2101-ps.asp
+2026-03-07 22:42:08,744 [INFO]     [191] https://avalon.law.yale.edu/imt/2102-ps.asp
+2026-03-07 22:42:10,592 [INFO]     [192] https://avalon.law.yale.edu/imt/2103-ps.asp
+2026-03-07 22:42:12,323 [INFO]     [193] https://avalon.law.yale.edu/imt/2104-ps.asp
+2026-03-07 22:42:14,074 [INFO]     [194] https://avalon.law.yale.edu/imt/2105-ps.asp
+2026-03-07 22:42:15,818 [INFO]     [195] https://avalon.law.yale.edu/imt/2107-ps.asp
+2026-03-07 22:42:17,554 [INFO]     [196] https://avalon.law.yale.edu/imt/2108-ps.asp
+2026-03-07 22:42:19,305 [INFO]     [197] https://avalon.law.yale.edu/imt/2111-ps.asp
+2026-03-07 22:42:21,061 [INFO]     [198] https://avalon.law.yale.edu/imt/2112-ps.asp
+2026-03-07 22:42:22,810 [INFO]     [199] https://avalon.law.yale.edu/imt/2113-ps.asp
+2026-03-07 22:42:24,559 [INFO]     [200] https://avalon.law.yale.edu/imt/2115-ps.asp
+2026-03-07 22:42:26,383 [INFO]     [201] https://avalon.law.yale.edu/imt/2118-ps.asp
+2026-03-07 22:42:28,100 [INFO]     [202] https://avalon.law.yale.edu/imt/2119-ps.asp
+2026-03-07 22:42:29,841 [INFO]     [203] https://avalon.law.yale.edu/imt/2120-ps.asp
+2026-03-07 22:42:31,584 [INFO]     [204] https://avalon.law.yale.edu/imt/2124-ps.asp
+2026-03-07 22:42:33,336 [INFO]     [205] https://avalon.law.yale.edu/imt/2149-ps.asp
+2026-03-07 22:42:35,082 [INFO]     [206] https://avalon.law.yale.edu/imt/2153-ps.asp
+2026-03-07 22:42:36,898 [INFO]     [207] https://avalon.law.yale.edu/imt/2154-ps.asp
+2026-03-07 22:42:38,651 [INFO]     [208] https://avalon.law.yale.edu/imt/2156-ps.asp
+2026-03-07 22:42:40,416 [INFO]     [209] https://avalon.law.yale.edu/imt/2163-ps.asp
+2026-03-07 22:42:42,183 [INFO]     [210] https://avalon.law.yale.edu/imt/2164-ps.asp
+2026-03-07 22:42:43,925 [INFO]     [211] https://avalon.law.yale.edu/imt/2168-ps.asp
+2026-03-07 22:42:45,696 [INFO]     [212] https://avalon.law.yale.edu/imt/2169-ps.asp
+2026-03-07 22:42:47,456 [INFO]     [213] https://avalon.law.yale.edu/imt/2171-ps.asp
+2026-03-07 22:42:49,308 [INFO]     [214] https://avalon.law.yale.edu/imt/2176-ps.asp
+2026-03-07 22:42:51,067 [INFO]     [215] https://avalon.law.yale.edu/imt/2187-ps.asp
+2026-03-07 22:42:52,827 [INFO]     [216] https://avalon.law.yale.edu/imt/2189-ps.asp
+2026-03-07 22:42:54,644 [INFO]     [217] https://avalon.law.yale.edu/imt/2194-ps.asp
+2026-03-07 22:42:56,489 [INFO]     [218] https://avalon.law.yale.edu/imt/2195-ps.asp
+2026-03-07 22:42:58,200 [INFO]     [219] https://avalon.law.yale.edu/imt/2199-ps.asp
+2026-03-07 22:42:59,948 [INFO]     [220] https://avalon.law.yale.edu/imt/2219-ps.asp
+2026-03-07 22:43:01,680 [INFO]     [221] https://avalon.law.yale.edu/imt/2220-ps.asp
+2026-03-07 22:43:03,542 [INFO]     [222] https://avalon.law.yale.edu/imt/2222-ps.asp
+2026-03-07 22:43:05,267 [INFO]     [223] https://avalon.law.yale.edu/imt/2224-ps.asp
+2026-03-07 22:43:07,014 [INFO]     [224] https://avalon.law.yale.edu/imt/2225-ps.asp
+2026-03-07 22:43:08,757 [INFO]     [225] https://avalon.law.yale.edu/imt/2226-ps.asp
+2026-03-07 22:43:10,501 [INFO]     [226] https://avalon.law.yale.edu/imt/2228-ps.asp
+2026-03-07 22:43:12,245 [INFO]     [227] https://avalon.law.yale.edu/imt/2229-ps.asp
+2026-03-07 22:43:14,047 [INFO]     [228] https://avalon.law.yale.edu/imt/2230-ps.asp
+2026-03-07 22:43:15,797 [INFO]     [229] https://avalon.law.yale.edu/imt/2231-ps.asp
+2026-03-07 22:43:17,550 [INFO]     [230] https://avalon.law.yale.edu/imt/2232-ps.asp
+2026-03-07 22:43:19,474 [INFO]     [231] https://avalon.law.yale.edu/imt/2233-ps.asp
+2026-03-07 22:43:21,286 [INFO]     [232] https://avalon.law.yale.edu/imt/2237-ps.asp
+2026-03-07 22:43:22,969 [INFO]     [233] https://avalon.law.yale.edu/imt/2239-ps.asp
+2026-03-07 22:43:24,736 [INFO]     [234] https://avalon.law.yale.edu/imt/2241-ps.asp
+2026-03-07 22:43:26,464 [INFO]     [235] https://avalon.law.yale.edu/imt/2243-ps.asp
+2026-03-07 22:43:28,219 [INFO]     [236] https://avalon.law.yale.edu/imt/2245-ps.asp
+2026-03-07 22:43:29,957 [INFO]     [237] https://avalon.law.yale.edu/imt/2246-ps.asp
+2026-03-07 22:43:31,691 [INFO]     [238] https://avalon.law.yale.edu/imt/2247-ps.asp
+2026-03-07 22:43:33,440 [INFO]     [239] https://avalon.law.yale.edu/imt/2248-ps.asp
+2026-03-07 22:43:35,183 [INFO]     [240] https://avalon.law.yale.edu/imt/2260-ps.asp
+2026-03-07 22:43:36,918 [INFO]     [241] https://avalon.law.yale.edu/imt/2261-ps.asp
+2026-03-07 22:43:38,674 [INFO]     [242] https://avalon.law.yale.edu/imt/2270-ps.asp
+2026-03-07 22:43:40,408 [INFO]     [243] https://avalon.law.yale.edu/imt/2271-ps.asp
+2026-03-07 22:43:42,167 [INFO]     [244] https://avalon.law.yale.edu/imt/2273-ps.asp
+2026-03-07 22:43:43,911 [INFO]     [245] https://avalon.law.yale.edu/imt/2275-ps.asp
+2026-03-07 22:43:45,648 [INFO]     [246] https://avalon.law.yale.edu/imt/2276-ps.asp
+2026-03-07 22:43:47,391 [INFO]     [247] https://avalon.law.yale.edu/imt/2277-ps.asp
+2026-03-07 22:43:49,147 [INFO]     [248] https://avalon.law.yale.edu/imt/2278-ps.asp
+2026-03-07 22:43:50,911 [INFO]     [249] https://avalon.law.yale.edu/imt/2280-ps.asp
+2026-03-07 22:43:52,642 [INFO]     [250] https://avalon.law.yale.edu/imt/2283-ps.asp
+2026-03-07 22:43:54,379 [INFO]     [251] https://avalon.law.yale.edu/imt/2284-ps.asp
+2026-03-07 22:43:56,170 [INFO]     [252] https://avalon.law.yale.edu/imt/2285-ps.asp
+2026-03-07 22:43:57,867 [INFO]     [253] https://avalon.law.yale.edu/imt/2288-ps.asp
+2026-03-07 22:43:59,595 [INFO]     [254] https://avalon.law.yale.edu/imt/2289-ps.asp
+2026-03-07 22:44:01,343 [INFO]     [255] https://avalon.law.yale.edu/imt/2292-ps.asp
+2026-03-07 22:44:03,087 [INFO]     [256] https://avalon.law.yale.edu/imt/2306-ps.asp
+2026-03-07 22:44:04,834 [INFO]     [257] https://avalon.law.yale.edu/imt/2307-ps.asp
+2026-03-07 22:44:06,574 [INFO]     [258] https://avalon.law.yale.edu/imt/2309-ps.asp
+2026-03-07 22:44:08,328 [INFO]     [259] https://avalon.law.yale.edu/imt/2310-ps.asp
+2026-03-07 22:44:10,046 [INFO]     [260] https://avalon.law.yale.edu/imt/2311-ps.asp
+2026-03-07 22:44:11,807 [INFO]     [261] https://avalon.law.yale.edu/imt/2313-ps.asp
+2026-03-07 22:44:13,548 [INFO]     [262] https://avalon.law.yale.edu/imt/2315-ps.asp
+2026-03-07 22:44:15,287 [INFO]     [263] https://avalon.law.yale.edu/imt/2319-ps.asp
+2026-03-07 22:44:17,104 [INFO]     [264] https://avalon.law.yale.edu/imt/2320-B-ps.asp
+2026-03-07 22:44:18,772 [INFO]     [265] https://avalon.law.yale.edu/imt/2322-ps.asp
+2026-03-07 22:44:20,523 [INFO]     [266] https://avalon.law.yale.edu/imt/2324-ps.asp
+2026-03-07 22:44:22,255 [INFO]     [267] https://avalon.law.yale.edu/imt/2325-ps.asp
+2026-03-07 22:44:23,997 [INFO]     [268] https://avalon.law.yale.edu/imt/2326-ps.asp
+2026-03-07 22:44:25,750 [INFO]     [269] https://avalon.law.yale.edu/imt/2327-ps.asp
+2026-03-07 22:44:27,494 [INFO]     [270] https://avalon.law.yale.edu/imt/2329-ps.asp
+2026-03-07 22:44:29,266 [INFO]     [271] https://avalon.law.yale.edu/imt/2330-ps.asp
+2026-03-07 22:44:31,114 [INFO]     [272] https://avalon.law.yale.edu/imt/2331-ps.asp
+2026-03-07 22:44:32,871 [INFO]     [273] https://avalon.law.yale.edu/imt/2332-ps.asp
+2026-03-07 22:44:34,607 [INFO]     [274] https://avalon.law.yale.edu/imt/2333-ps.asp
+2026-03-07 22:44:36,363 [INFO]     [275] https://avalon.law.yale.edu/imt/2334-ps.asp
+2026-03-07 22:44:38,126 [INFO]     [276] https://avalon.law.yale.edu/imt/2335-ps.asp
+2026-03-07 22:44:39,986 [INFO]     [277] https://avalon.law.yale.edu/imt/2336-ps.asp
+2026-03-07 22:44:41,722 [INFO]     [278] https://avalon.law.yale.edu/imt/2340-ps.asp
+2026-03-07 22:44:43,449 [INFO]     [279] https://avalon.law.yale.edu/imt/2341-ps.asp
+2026-03-07 22:44:45,185 [INFO]     [280] https://avalon.law.yale.edu/imt/2342-ps.asp
+2026-03-07 22:44:47,034 [INFO]     [281] https://avalon.law.yale.edu/imt/2344-ps.asp
+2026-03-07 22:44:48,760 [INFO]     [282] https://avalon.law.yale.edu/imt/2347-ps.asp
+2026-03-07 22:44:50,623 [INFO]     [283] https://avalon.law.yale.edu/imt/2348-ps.asp
+2026-03-07 22:44:52,398 [INFO]     [284] https://avalon.law.yale.edu/imt/2349-ps.asp
+2026-03-07 22:44:54,265 [INFO]     [285] https://avalon.law.yale.edu/imt/2351-ps.asp
+2026-03-07 22:44:55,999 [INFO]     [286] https://avalon.law.yale.edu/imt/2352-ps.asp
+2026-03-07 22:44:57,780 [INFO]     [287] https://avalon.law.yale.edu/imt/2353-ps.asp
+2026-03-07 22:44:59,561 [INFO]     [288] https://avalon.law.yale.edu/imt/2354-ps.asp
+2026-03-07 22:45:01,340 [INFO]     [289] https://avalon.law.yale.edu/imt/2355-ps.asp
+2026-03-07 22:45:03,121 [INFO]     [290] https://avalon.law.yale.edu/imt/2357-ps.asp
+2026-03-07 22:45:05,016 [INFO]     [291] https://avalon.law.yale.edu/imt/2358-ps.asp
+2026-03-07 22:45:06,824 [INFO]     [292] https://avalon.law.yale.edu/imt/2360-ps.asp
+2026-03-07 22:45:08,573 [INFO]     [293] https://avalon.law.yale.edu/imt/2367-ps.asp
+2026-03-07 22:45:10,379 [INFO]     [294] https://avalon.law.yale.edu/imt/2368-ps.asp
+2026-03-07 22:45:12,175 [INFO]     [295] https://avalon.law.yale.edu/imt/2371-ps.asp
+2026-03-07 22:45:14,013 [INFO]     [296] https://avalon.law.yale.edu/imt/2372-ps.asp
+2026-03-07 22:45:16,314 [INFO]     [297] https://avalon.law.yale.edu/imt/2373-ps.asp

@@ -1,0 +1,6 @@
+{
+  "content_type_header": "text/html",
+  "requests_detected": "ISO-8859-1",
+  "chardet_detected": "utf-8",
+  "recommendation": "use_apparent_encoding"
+}
