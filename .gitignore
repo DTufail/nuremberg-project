@@ -1,70 +1,20 @@
-# Byte-compiled / optimized / DLL files
+# Exclude virtual environment
+venv/
+
+# Exclude Python cache files
 __pycache__/
 *.py[cod]
 
-# C extensions
-*.so
+# Exclude temporary files
+*.tmp
+*.log
+*.bak
+*.swp
 
-# Distribution / packaging
-.Python
-env/
-venv/
-ENV/
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-.hypothesis/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# pyenv
-.python-version
-
-# pipenv
-Pipfile
-Pipfile.lock
-
-# poetry
-poetry.lock
-
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow
-__pypackages__/
-
-# Celery
-celerybeat-schedule
-
-# SageMath parsed files
-*.sage.py
-
-# Environments
-.env
-.env.*
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
-
-# pytype static type analyzer
-.pytype/
-
-# Cython debug symbols
-cython_debug/
-
-# VS Code settings
-.vscode/
-
-# macOS specific files
+# Exclude system files
 .DS_Store
+Thumbs.db
+
+# Exclude unnecessary output files
+output/temp/
+output/intermediate/
