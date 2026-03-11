@@ -54,7 +54,7 @@ EMBED_DIM     = 1024
 RRF_K         = 60       # Cormack et al. 2009 — robust standard
 DENSE_N       = 100      # candidates from dense retrieval
 SPARSE_N      = 100      # candidates from sparse retrieval
-RERANK_INPUT  = 100      # max chunks sent to reranker (post-RRF)
+RERANK_INPUT  = 25      # max chunks sent to reranker (post-RRF)
 DEFAULT_TOP_K = 5        # final chunks returned to generator
 MAX_Q_TOKENS  = 512      # query max tokens (queries are short)
 
