@@ -6,3 +6,6 @@ output/index/metadata.jsonl
 output/chunks.jsonl
 .env
 *.log
+.ipynb_checkpoints/
+.gradio/
+*.bak
