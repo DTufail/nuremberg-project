@@ -1,24 +1,8 @@
-# Exclude virtual environment
-venv/
-
-# Exclude Python cache files
 __pycache__/
-*.py[cod]
-
-# Exclude temporary files
-*.tmp
-*.log
-*.bak
-*.swp
-
-# Exclude system files
-.DS_Store
-Thumbs.db
-
-# Exclude unnecessary output files
-output/temp/
-output/intermediate/
-
-# Exclude large output files
+*.pyc
+output/index/dense.faiss
+output/index/sparse.jsonl
+output/index/metadata.jsonl
 output/chunks.jsonl
-
+.env
+*.log

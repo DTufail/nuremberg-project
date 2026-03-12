@@ -1,0 +1,17 @@
+{
+  "model": "BAAI/bge-m3",
+  "embed_dim": 1024,
+  "total_vectors": 46325,
+  "collections": {
+    "sessions": 40166,
+    "judgment": 1076,
+    "key_docs": 266,
+    "vol1": 159,
+    "secondary": 4658
+  },
+  "total_time_s": 411.8,
+  "chunks_per_sec": 112.5,
+  "device": "cuda",
+  "batch_size": 32,
+  "backend": "huggingface_transformers"
+}
