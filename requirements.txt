@@ -1,0 +1,29 @@
+# Nuremberg Scholar — HuggingFace Space dependencies
+# Pinned to versions tested on SageMaker ml.g5.2xlarge (2026-03-11)
+
+# Gradio (SDK — version must match sdk_version in README YAML)
+gradio>=5.9.0
+
+# ZeroGPU decorator — only works on HF Spaces, ignored locally
+spaces
+
+# PyTorch — Spaces build provides CUDA runtime, we just need the package
+torch>=2.1.0
+
+# Transformers — BGE-M3 + bge-reranker-v2-m3
+transformers>=4.40.0
+
+# FAISS — CPU version (46K vectors is fast enough on CPU, saves VRAM)
+faiss-cpu
+
+# BGE-M3 sparse_linear.pt download via hf_hub_download
+huggingface_hub
+
+# Sparse index (CSR matrix)
+scipy
+
+# Array ops
+numpy
+
+# Groq LLM API
+groq

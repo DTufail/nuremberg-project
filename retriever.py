@@ -1,11 +1,25 @@
 """
-retriever.py  —  Nuremberg Scholar Hybrid Retriever
-=====================================================
+retriever.py  —  Nuremberg Scholar Hybrid Retriever (HuggingFace Spaces / ZeroGPU)
+====================================================================================
+Changes from local/SageMaker version:
+  - index_dir parameter         : Retriever accepts an explicit path instead of
+                                  hardcoded Path("output/index"). On Spaces this
+                                  comes from snapshot_download(); locally it falls
+                                  back to the default ./output/index/.
+  - CPU-first model loading     : QueryEncoder and Reranker load to CPU at init.
+                                  rag.py moves them to CUDA inside the @spaces.GPU
+                                  window and back to CPU after. The .device attribute
+                                  on QueryEncoder and Reranker is updated by rag.py
+                                  before each call so encode()/rerank() run on the
+                                  correct device.
+  - dtype= replaces torch_dtype : fixes the transformers deprecation warning.
+  - CLI smoke test preserved    : `python retriever.py --query "..." ` still works
+                                  for local testing; it auto-detects CUDA availability.
+
 Pipeline (paper-backed):
   1. Query encoding  : BGE-M3 dense (1024d) + sparse (lexical weights)
-                       Uses same HF-only BGEM3 class as embedder.py
   2. Dense retrieval : FAISS FlatIP top-N  (cosine via L2-norm + inner product)
-  3. Sparse retrieval: dot-product over inverted sparse index, top-N
+  3. Sparse retrieval: dot-product over CSR sparse matrix, top-N
   4. RRF fusion      : k=60, merge dense+sparse ranked lists -> top-K candidates
   5. Reranking       : bge-reranker-v2-m3 cross-encoder -> sigmoid scores -> top-K_final
   6. Return          : list of ranked Result objects with metadata + scores
@@ -40,12 +54,9 @@ from pathlib import Path
 from dataclasses import dataclass, field
 from typing import Optional
 
-# ── Paths ─────────────────────────────────────────────────────────────────────
+# ── Defaults ──────────────────────────────────────────────────────────────────
 
-INDEX_DIR     = Path("output/index")
-DENSE_FILE    = INDEX_DIR / "dense.faiss"
-SPARSE_FILE   = INDEX_DIR / "sparse.jsonl"
-META_FILE     = INDEX_DIR / "metadata.jsonl"
+DEFAULT_INDEX_DIR = Path("output/index")
 
 EMBED_MODEL   = "BAAI/bge-m3"
 RERANK_MODEL  = "BAAI/bge-reranker-v2-m3"
@@ -57,12 +68,6 @@ SPARSE_N      = 100      # candidates from sparse retrieval
 RERANK_INPUT  = 25       # max chunks sent to reranker (post-RRF)
 DEFAULT_TOP_K = 5        # final chunks returned to generator
 MAX_Q_TOKENS  = 512      # query max tokens (queries are short)
-
-   # skip reranker if top FAISS score >= this
-# Rationale: FAISS scores are cosine similarities (L2-normed vectors).
-# At >=0.94 the top dense result is an unambiguous match; cross-encoder
-# reranking rarely changes top-k ordering at this confidence level but
-# costs ~0.4s. Do not lower below 0.92 without testing for precision loss.
 
 # ── Result dataclass ──────────────────────────────────────────────────────────
 
@@ -105,9 +110,15 @@ class QueryEncoder:
 
     sparse_linear = Linear(1024, 1) — scalar weight per token position.
     Scatter onto input_ids vocab positions via scatter_reduce("amax").
+
+    ZeroGPU note:
+      Loads to CPU at init. rag.py moves self.model to CUDA inside the
+      @spaces.GPU window by calling self.model.to("cuda") and updating
+      self.device. encode() uses self.device for all tensor ops, so it
+      runs on whichever device the model currently sits on.
     """
 
-    def __init__(self, model_name: str, device: str):
+    def __init__(self, model_name: str, device: str = "cpu"):
         import torch
         import torch.nn as nn
         from transformers import AutoTokenizer, AutoModel
@@ -119,9 +130,11 @@ class QueryEncoder:
         self.tokenizer  = AutoTokenizer.from_pretrained(model_name)
         self.vocab_size = self.tokenizer.vocab_size   # 250002
 
+        # CPU-first: always load to CPU, let caller move to GPU when needed.
+        # dtype= replaces deprecated torch_dtype=
         self.model = AutoModel.from_pretrained(
             model_name,
-            torch_dtype=torch.float16 if self.fp16 else torch.float32,
+            dtype=torch.float16 if self.fp16 else torch.float32,
         )
         self.model.to(self.device)
         self.model.eval()
@@ -137,9 +150,19 @@ class QueryEncoder:
         self.sparse_linear.eval()
 
     def encode(self, query: str) -> dict:
+        """
+        Encode a query string. Uses self.device for all tensor placement,
+        so this works on both CPU and CUDA depending on where the model
+        has been moved by the caller.
+        """
         import torch
         import numpy as np
         import torch.nn.functional as F
+
+        # Resolve current device from the model parameters — this handles
+        # the case where rag.py has moved self.model to CUDA but self.device
+        # hasn't been explicitly updated yet.
+        device = next(self.model.parameters()).device
 
         enc = self.tokenizer(
             [query],
@@ -148,21 +171,26 @@ class QueryEncoder:
             max_length=MAX_Q_TOKENS,
             return_tensors="pt",
         )
-        enc = {k: v.to(self.device) for k, v in enc.items()}
+        enc = {k: v.to(device) for k, v in enc.items()}
 
-        with self.torch.no_grad():
+        with torch.no_grad():
             out         = self.model(**enc, return_dict=True)
             last_hidden = out.last_hidden_state
 
             dense    = F.normalize(last_hidden[:, 0, :].float(), p=2, dim=-1)
             dense_np = dense.cpu().numpy().astype("float32")[0]  # (1024,)
 
+            # sparse_linear may be on a different device if only self.model
+            # was moved — move it to match
+            if next(self.sparse_linear.parameters()).device != device:
+                self.sparse_linear.to(device)
+
             token_weights = torch.relu(
                 self.sparse_linear(last_hidden)
             ).squeeze(-1).float()
 
         sparse_emb = torch.zeros(
-            1, self.vocab_size, dtype=torch.float32, device=self.device
+            1, self.vocab_size, dtype=torch.float32, device=device
         )
         sparse_emb = sparse_emb.scatter_reduce(
             dim=1,
@@ -194,18 +222,25 @@ class Reranker:
     """
     bge-reranker-v2-m3 cross-encoder.
     Scores sigmoid-mapped to [0,1] per HF model card recommendation.
+
+    ZeroGPU note:
+      Same CPU-first pattern as QueryEncoder. rag.py moves self.model
+      to CUDA inside the @spaces.GPU window. rerank() resolves device
+      from model parameters.
     """
 
-    def __init__(self, model_name: str, device: str):
+    def __init__(self, model_name: str, device: str = "cpu"):
         import torch
         from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
         self.device    = torch.device(device)
         self.torch     = torch
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-        self.model     = AutoModelForSequenceClassification.from_pretrained(
+
+        # dtype= replaces deprecated torch_dtype=
+        self.model = AutoModelForSequenceClassification.from_pretrained(
             model_name,
-            torch_dtype=torch.float16 if device != "cpu" else torch.float32,
+            dtype=torch.float16 if device != "cpu" else torch.float32,
         )
         self.model.to(self.device)
         self.model.eval()
@@ -213,6 +248,9 @@ class Reranker:
     def rerank(self, query: str, candidates: list[Result],
                batch_size: int = 32) -> list[Result]:
         import torch
+
+        # Resolve current device from model parameters
+        device = next(self.model.parameters()).device
 
         pairs      = [[query, c.body] for c in candidates]
         all_scores = []
@@ -226,7 +264,7 @@ class Reranker:
                 max_length=512,
                 return_tensors="pt",
             )
-            enc = {k: v.to(self.device) for k, v in enc.items()}
+            enc = {k: v.to(device) for k, v in enc.items()}
             with torch.no_grad():
                 logits = self.model(**enc, return_dict=True).logits.view(-1).float()
             scores = torch.sigmoid(logits).cpu().tolist()
@@ -388,7 +426,11 @@ class Retriever:
 
     Parameters
     ----------
-    device        : "cuda" / "cpu"
+    index_dir     : Path to directory containing dense.faiss, metadata.jsonl,
+                    sparse.jsonl. Defaults to ./output/index/ for local dev.
+                    On Spaces, rag.py passes the snapshot_download() cache path.
+    device        : "cuda" / "cpu". On Spaces this is "cpu" at init time;
+                    rag.py moves models to CUDA inside the @spaces.GPU window.
     dense_n       : candidates from FAISS  (default 100)
     sparse_n      : candidates from sparse index (default 100)
     rerank_input  : max chunks sent to reranker (default 25)
@@ -399,7 +441,8 @@ class Retriever:
 
     def __init__(
         self,
-        device:       str  = "cuda",
+        index_dir:    Optional[str] = None,
+        device:       str  = "cpu",
         dense_n:      int  = DENSE_N,
         sparse_n:     int  = SPARSE_N,
         rerank_input: int  = RERANK_INPUT,
@@ -409,6 +452,12 @@ class Retriever:
     ):
         import faiss
 
+        # Resolve index directory
+        idx_dir = Path(index_dir) if index_dir else DEFAULT_INDEX_DIR
+        dense_file  = idx_dir / "dense.faiss"
+        sparse_file = idx_dir / "sparse.jsonl"
+        meta_file   = idx_dir / "metadata.jsonl"
+
         self.device       = device
         self.dense_n      = dense_n
         self.sparse_n     = sparse_n
@@ -417,15 +466,15 @@ class Retriever:
         self.use_reranker = use_reranker
         self.dense_only   = dense_only
 
-        if not DENSE_FILE.exists():
-            raise FileNotFoundError(f"Dense index not found: {DENSE_FILE}")
-        print(f"  Loading FAISS index...")
-        self.faiss_index = faiss.read_index(str(DENSE_FILE))
+        if not dense_file.exists():
+            raise FileNotFoundError(f"Dense index not found: {dense_file}")
+        print(f"  Loading FAISS index from {idx_dir}...")
+        self.faiss_index = faiss.read_index(str(dense_file))
         print(f"  FAISS: {self.faiss_index.ntotal:,} vectors")
 
         print(f"  Loading metadata...")
         self.metadata: list[dict] = []
-        with META_FILE.open(encoding="utf-8") as f:
+        with meta_file.open(encoding="utf-8") as f:
             for line in f:
                 line = line.strip()
                 if line:
@@ -435,7 +484,7 @@ class Retriever:
         self.chunk_id_to_idx = {m["chunk_id"]: i for i, m in enumerate(self.metadata)}
 
         if not dense_only:
-            self.sparse_index = SparseIndex(SPARSE_FILE)
+            self.sparse_index = SparseIndex(sparse_file)
         else:
             self.sparse_index = None
 
@@ -448,6 +497,7 @@ class Retriever:
             self.reranker = Reranker(RERANK_MODEL, device)
 
         print(f"\n  Retriever ready  "
+              f"device={device}  index={idx_dir}  "
               f"dense_n={dense_n}  sparse_n={sparse_n}  "
               f"rerank={use_reranker}  top_k={top_k}\n")
 
@@ -557,6 +607,8 @@ def main():
     ap.add_argument("--dense-only", action="store_true")
     ap.add_argument("--dense-n",    type=int, default=DENSE_N)
     ap.add_argument("--sparse-n",   type=int, default=SPARSE_N)
+    ap.add_argument("--index-dir",  default=None,
+                    help="Path to index directory (default: ./output/index/)")
     args = ap.parse_args()
 
     if args.device == "cuda":
@@ -571,6 +623,7 @@ def main():
     print("=" * 60)
 
     retriever = Retriever(
+        index_dir    = args.index_dir,
         device       = args.device,
         dense_n      = args.dense_n,
         sparse_n     = args.sparse_n,
